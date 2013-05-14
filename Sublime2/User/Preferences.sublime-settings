@@ -1,0 +1,58 @@
+{
+	"close_windows_when_empty": true,
+	"color_scheme": "Packages/User/Monokai Soda.tmTheme",
+	"dictionary": "Packages/Language - English/en_GB.dic",
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		".gitignore",
+		".gitkeep",
+		".rspec",
+		"Gemfile.lock",
+		"._*"
+	],
+	"font_family": "Inconsolata",
+	"font_size": 13.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"open_files_in_new_window": false,
+	"rulers":
+	[
+		80, 120
+	],
+	"scroll_past_end": true,
+	"show_full_path": true,
+	"tab_size": 2,
+	"theme": "Soda Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"use_simple_full_screen": true,
+  "trim_trailing_white_space_on_save": true,
+  "ensure_newline_at_eof_on_save": true
+}

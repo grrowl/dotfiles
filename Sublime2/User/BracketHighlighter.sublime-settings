@@ -1,0 +1,20 @@
+{
+  // Outline? (solid|outline|underline|none)
+  "quote_style" : "underline",
+  "curly_style" : "outline",
+  "round_style" : "outline",
+  "square_style": "outline",
+  "angle_style" : "outline",
+  "tag_style"   : "underline",
+
+  "no_multi_select_icons": true,
+
+  // Icon? (dot|circle|bookmark|quote|curly_bracket|round_bracket|square_bracket|angle_bracket|none)
+  "quote_icon" : "none",
+  "curly_icon" : "none",
+  "round_icon" : "none",
+  "square_icon": "none",
+  "angle_icon" : "none",
+  "tag_icon"   : "none"
+
+}

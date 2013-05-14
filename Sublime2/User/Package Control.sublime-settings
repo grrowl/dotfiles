@@ -1,0 +1,20 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"BracketHighlighter",
+		"Emmet",
+		"GitGutter",
+		"Handlebars",
+		"HTML5",
+		"JsFormat",
+		"Markdown Preview",
+		"Minifier",
+		"Package Control",
+		"Sass",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"Theme - Soda",
+		"Web Inspector"
+	]
+}

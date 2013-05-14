@@ -1,0 +1,10 @@
+[
+	{ "keys": ["ctrl+tab"], "command": "next_view" },
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+
+	{ "keys": ["super+shift+]"], "command": "next_view_in_stack" },
+	{ "keys": ["super+shift+["], "command": "prev_view_in_stack" },
+
+  { "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
+  { "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} }
+]
