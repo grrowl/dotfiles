@@ -1,6 +1,4 @@
 PS1="\[\e[1;32m\]\h:\W \u$\[\e[0m\] "
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-if [[ -s /Users/tom/.rvm/scripts/rvm ]] ; then source /Users/tom/.rvm/scripts/rvm ; fi
 
 # cool aliases bro
 
