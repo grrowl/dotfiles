@@ -2,5 +2,5 @@
 git config --global user.email "tom@chillidonut.com"
 
 # symlink bash files (no delete)
-ln -s .bashrc ../.bashrc
-ln -s .bash_history ../.bash_history
+ln -s dotfiles/.bashrc ~/.bashrc
+ln -s dotfiles/.bash_logout ~/.bash_logout
