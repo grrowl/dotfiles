@@ -23,7 +23,7 @@ bind '"\e[B": history-search-forward'
 # ssh coloring
 ssh() {
     if command ssh "$@"; then
-	# reset iTerm session to Default
+    # reset iTerm session to Default
         echo -e "\033]50;SetProfile=Default\a"
     fi
 }
