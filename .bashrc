@@ -16,6 +16,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# better back-searching
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
 # ssh coloring
 ssh() {
     if command ssh "$@"; then
