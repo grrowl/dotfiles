@@ -1,1 +1,2 @@
-dotfiles/.gitconfig
+[user]
+	email = tom@chillidonut.com
