@@ -18,3 +18,9 @@ if [[ ! -f ~/.gitconfig ]]; then
   rm ~/.gitconfig 2> /dev/null
 fi
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+
+if [[ ! -f ~/.vimrc ]]; then
+  mv -i ~/.vimrc ~/.vimrc.bak;
+  rm ~/.vimrc 2> /dev/null
+fi
+ln -s ~/dotfiles/.vimrc ~/.vimrc
