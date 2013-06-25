@@ -27,3 +27,7 @@ ssh() {
         echo -e "\033]50;SetProfile=Default\a"
     fi
 }
+
+if [[ ! -d ~/webdev ]]; then
+  cd /webdev
+fi

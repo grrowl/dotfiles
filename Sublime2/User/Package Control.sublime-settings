@@ -3,10 +3,12 @@
 	"installed_packages":
 	[
 		"BracketHighlighter",
+		"CoffeeScript",
 		"Emmet",
 		"GitGutter",
 		"Handlebars",
 		"HTML5",
+		"JS2Coffee",
 		"JsFormat",
 		"Markdown Preview",
 		"Minifier",
