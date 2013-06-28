@@ -1,5 +1,8 @@
 PS1="\[\e[1;32m\]\h:\W \u$\[\e[0m\] "
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # rvm
+# todo: rbenv
+
 # cool aliases bro
 
 alias start-ubuntu='/Applications/VMware\ Fusion.app/Contents/Library/vmrun -T fusion start ~/Documents/Virtual\ Machines.localized/Ubuntu\ Server.vmwarevm nogui && open smb://ubuntu/share'
@@ -28,6 +31,6 @@ ssh() {
     fi
 }
 
-if [[ ! -d ~/webdev ]]; then
+if [ -d ~/webdev ]; then
   cd /webdev
 fi
