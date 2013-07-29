@@ -3,6 +3,7 @@ set number	       " Show line numbers
 set showbreak=+++	 " Wrap-broken line prefix
 set showmatch	     " Highlight matching brace
 set visualbell	   " Use visual bell (no beeping)
+set noswapfile     " Disable swap files
 
 set hlsearch	" Highlight all search results
 set ignorecase	" Always case-insensitive

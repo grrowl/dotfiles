@@ -1,26 +1,19 @@
-# symlink bash files (no delete)
-echo "# Backing up files: if not removed, will be deleted."
+# symlink dotfiles
+SCRIPT_PATH=`realpath $0`
+dotfiles=`dirname $SCRIPT_PATH`
+olddir=~/dotfiles_old   # backup directory
 
-if [[ ! -f ~/.bashrc ]]; then
-  mv -i ~/.bashrc ~/.bashrc.bak;
-  rm ~/.bashrc 2> /dev/null
-fi
-ln -s ~/dotfiles/.bashrc ~/.bashrc
 
-if [[ ! -f ~/.bash_logout ]]; then
-  mv -i ~/.bash_logout ~/.bash_logout.bak;
-  rm ~/.bash_logout 2> /dev/null
-fi
-ln -s ~/dotfiles/.bash_logout ~/.bash_logout
+files=".bashrc .vimrc .bash_logout .gitconfig"    # list of files/folders to symlink in homedir
 
-if [[ ! -f ~/.gitconfig ]]; then
-  mv -i ~/.gitconfig ~/.gitconfig.bak;
-  rm ~/.gitconfig 2> /dev/null
-fi
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+## create dotfiles_old in homedir
+echo "Creating $olddir for backup"
+mkdir -p $olddir
+cd $dotfiles
 
-if [[ ! -f ~/.vimrc ]]; then
-  mv -i ~/.vimrc ~/.vimrc.bak;
-  rm ~/.vimrc 2> /dev/null
-fi
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+## move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
+for file in $files; do
+    mv -f ~/$file $olddir
+    echo "Creating symlink to $file in ~"
+    ln -s $dir/$file ~/$file
+done
