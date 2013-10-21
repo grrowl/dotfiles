@@ -1,7 +1,7 @@
 PS1="\[\e[1;32m\]\h:\W \u$\[\e[0m\] "
 
 # cool aliases bro
-alias start-ubuntu="`locate vmrun` -T fusion start ~/Documents/Virtual\ Machines.localized/Ubuntu\ Server.vmwarevm nogui && open smb://ubuntu/share"
+alias start-ubuntu="'`locate vmrun`' -T fusion start ~/Documents/Virtual\ Machines.localized/Ubuntu\ Server.vmwarevm nogui && open smb://ubuntu/share"
 alias restart-sound="sudo kill -9 `ps ax|grep 'coreaudio[a-z]' |awk '{print $1}'`"
 alias start-http='python -m SimpleHTTPServer'
 
