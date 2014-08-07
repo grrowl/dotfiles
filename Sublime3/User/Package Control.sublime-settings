@@ -2,13 +2,29 @@
 	"installed_packages":
 	[
 		"BracketHighlighter",
+		"Color Highlighter",
+		"DocBlockr",
 		"Emmet",
 		"Git",
 		"GitGutter",
 		"JsFormat",
+		"JSONLint",
+		"JSX",
 		"Monokai Extended",
+		"Origami",
+		"Pretty JSON",
+		"Sass",
 		"SassBeautify",
+		"SCSS",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"SublimeLinter-jsxhint",
+		"SublimeLinter-phplint",
 		"Syntax Highlighting for Sass",
 		"Theme - Soda"
+	],
+	"repositories":
+	[
+		"https://github.com/jdc0589/JsFormat"
 	]
 }

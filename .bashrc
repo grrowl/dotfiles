@@ -12,6 +12,8 @@ alias production='export RAILS_ENV=production && echo "Rails: $RAILS_ENV"'
 alias development='export RAILS_ENV=development && echo "Rails: $RAILS_ENV"'
 
 # some more ls aliases from ubuntu
+export CLICOLOR=1
+export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd 
 eval `dircolors 2> /dev/null`
 alias ll='ls -alF'
 alias la='ls -A'

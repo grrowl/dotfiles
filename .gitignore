@@ -13,6 +13,12 @@ Icon
 
 ### SublimeText ###
 *.sublime-workspace
+Sublime3/User/Package Control.last-run
+Sublime3/User/Package Control.ca-list
+Sublime3/User/Package Control.ca-bundle
+Sublime3/User/Package Control.system-ca-bundle
+Sublime3/User/Package Control.cache/
+Sublime3/User/Package Control.ca-certs/
 
 ### Rails ###
 *.rbc
@@ -30,3 +36,6 @@ Icon
 /spec/tmp/*
 **.orig
 .project
+
+### Other
+bak/
