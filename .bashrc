@@ -35,6 +35,6 @@ if [ -d /usr/local/opt/android-sdk ]; then
   export ANDROID_HOME=/usr/local/opt/android-sdk
 fi
 
-if [ -d ~/webdev ]; then
-  cd /webdev
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
 fi
