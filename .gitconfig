@@ -1,26 +1,30 @@
 [user]
-	email = tom@chillidonut.com
-	name = Tom McKenzie
-
+    email = tom@chillidonut.com
+    name = Tom McKenzie
 
 [color]
- branch = auto
- diff = auto
- status = auto
+    branch = auto
+    diff = auto
+    status = auto
+
 [color "branch"]
- current = yellow reverse
- local = yellow
- remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
+
 [color "diff"]
- meta = yellow bold
- frag = magenta bold
- old = red
- new = cyan
+    meta = yellow bold
+    frag = magenta bold
+    old = red
+    new = cyan
+
 [color "status"]
- added = yellow
- changed = green
- untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
+
 [help]
-	autocorrect = 10
+    autocorrect = 10
+
 [push]
-	default = matching
+    default = simple 
