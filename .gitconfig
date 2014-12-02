@@ -27,4 +27,7 @@
     autocorrect = 10
 
 [push]
-    default = simple 
+    default = simple
+
+[alias]
+    fancy-log  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
