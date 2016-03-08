@@ -89,4 +89,3 @@ else
   export EDITOR='subl'
 fi
 
-source $(brew --prefix nvm)/nvm.sh
