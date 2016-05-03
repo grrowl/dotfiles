@@ -32,6 +32,7 @@
 [alias]
     fancy-log  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
     branches = for-each-ref --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:iso8601) %(color:white)%(objectname:short) %09%(color:yellow)%(refname:short) %09%(color:white)%(upstream:track) %(contents:subject)' refs/heads
+    edit-conflicted = ! git diff --name-only | uniq | xargs subl
 [core]
-	editor = subl -n -w
+	editor = subl -w
 	excludesfile = ~/.gitignore-global
