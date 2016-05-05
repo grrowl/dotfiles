@@ -2,5 +2,13 @@
   { "keys": ["ctrl+tab"], "command": "next_view" },
   { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
   { "keys": ["super+v"], "command": "paste_and_indent" },
-  { "keys": ["super+shift+v"], "command": "paste" }
+  { "keys": ["super+shift+v"], "command": "paste" },
+  { "keys": ["super+option+down"], "command": "git_gutter_next_change" },
+  { "keys": ["super+option+up"], "command": "git_gutter_prev_change" },
+  { "keys": ["enter"], "command": "commit_completion", "context":
+    [
+      { "key": "auto_complete_visible" }
+    ]
+  },
+
 ]

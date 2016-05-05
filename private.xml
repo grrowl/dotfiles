@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>0. Custom stuff</name>
+    <item>
+      <name>Mouse5 (up) to Expose All</name>
+      <identifier>remap.mouse5toexposeall</identifier>
+      <autogen>
+        __PointingRelativeToScroll__
+        PointingButton::BUTTON5,
+
+        Option::POINTINGRELATIVETOSCROLL_TOKEYS,
+        KeyCode::EXPOSE_ALL, ,
+      </autogen>
+    </item>
+    <item>
+      <name>Mouse4 (down) to Expose App</name>
+      <identifier>remap.mouse4toexposeapp</identifier>
+      <autogen>
+        __PointingRelativeToScroll__
+        PointingButton::BUTTON4,
+
+        Option::POINTINGRELATIVETOSCROLL_TOKEYS,
+        KeyCode::EXPOSE_ALL, ModifierFlag::CONTROL_L,
+      </autogen>
+    </item>
+  </item>
+</root>

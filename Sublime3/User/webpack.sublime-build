@@ -1,0 +1,4 @@
+{
+  "shell_cmd": "./node_modules/webpack/bin/webpack.js",
+  "working_dir": "${project_path:${folder}}",
+}

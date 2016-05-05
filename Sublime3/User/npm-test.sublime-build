@@ -1,0 +1,4 @@
+{
+  "working_dir": "${project_path:${folder:${file_path}}}",
+  "cmd": ["/Users/tom/.nvm/versions/node/v5.6.0/bin/npm", "test"]
+}

@@ -5,20 +5,29 @@
 	],
 	"installed_packages":
 	[
+		"Babel",
 		"BracketHighlighter",
 		"Color Highlighter",
 		"Emmet",
+		"ES6-Toolkit",
 		"GitGutter",
+		"GitSavvy",
 		"JsFormat",
 		"JSONLint",
 		"JSX",
+		"Material Theme",
 		"Monokai Extended",
 		"Origami",
 		"Package Control",
 		"Pretty JSON",
+		"React ES6 Snippets",
 		"Sass",
 		"SCSS",
-		"Theme - Soda"
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-stylelint",
+		"Theme - Soda",
+		"TypeScript"
 	],
 	"repositories":
 	[
