@@ -89,3 +89,6 @@ else
   export EDITOR='subl'
 fi
 
+export PATH="/usr/local/sbin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
