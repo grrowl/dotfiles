@@ -1,4 +1,10 @@
 {
+	"added_words":
+	[
+		"deconstruct",
+		"params",
+		"redux"
+	],
 	"always_show_minimap_viewport": true,
 	"auto_find_in_selection": true,
 	"close_windows_when_empty": true,
@@ -44,7 +50,8 @@
 		".git",
 		".hg",
 		"CVS",
-		"node_modules"
+		"node_modules",
+		"dist"
 	],
 	"font_family": "Inconsolata",
 	"font_size": 14.0,
