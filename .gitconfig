@@ -37,3 +37,4 @@
 	editor = subl -w
 	excludesfile = ~/.gitignore-global
 	whitespace = tab-in-indent,trailing-space,space-before-tab
+	ignorecase = false
