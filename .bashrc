@@ -19,11 +19,6 @@ fi
 # prompt
 PS1="\[\e[1;32m\]\h:\W \u$\[\e[0m\] "
 
-# some more ls aliases from ubuntu
-export CLICOLOR=1
-export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
-eval `dircolors 2> /dev/null`
-
 # better back-searching
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
