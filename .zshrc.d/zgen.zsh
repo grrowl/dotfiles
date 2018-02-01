@@ -10,22 +10,26 @@ source "${HOME}/.zgen/zgen.zsh"
 
 # if the init scipt doesn't exist
 if ! zgen saved; then
-  echo "Saving zgen config"
+  echo "setting up zgen"
+
+  # completions
+  zgen load zsh-users/zsh-completions src
 
   # bulk load
   zgen loadall <<EOPLUGINS
     mreinhardt/sfz-prompt.zsh
+    zsh-users/zsh-autosuggestions
+    zsh-users/zsh-history-substring-search
+    zsh-users/zsh-syntax-highlighting
 EOPLUGINS
   # ^ can't indent this EOPLUGINS
-
-  # completions
-  zgen load zsh-users/zsh-completions src
 
   # save all to init script
   zgen save
 fi
 
-# customise sfz-prompt color palette
+# customise sfz-prompt
+
 PROMPT_SFZ_CHAR="›"
 
 prompt_sfz_colors () {
@@ -51,3 +55,22 @@ prompt_sfz_colors () {
     esac
 }
 
+prompt_sfz_git_dirty() {
+  # too expensive
+}
+
+# customise zsh-history-substring-search
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bold"
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="none"
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+setopt HIST_FIND_NO_DUPS
+
+# customise zsh-syntax-highlighting
+ZSH_HIGHLIGHT_STYLES[unknown-token]='none'
+ZSH_HIGHLIGHT_STYLES[path]='bold'
+
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=82'
+ZSH_HIGHLIGHT_STYLES[command]='fg=121'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=193'
+ZSH_HIGHLIGHT_STYLES[globbing]='fg=white'

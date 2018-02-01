@@ -19,3 +19,6 @@ bindkey '^[[1~' beginning-of-line # tmux
 
 bindkey '^[[F' end-of-line # iterm
 bindkey '^[[4~' end-of-line # tmux
+
+export HIST_IGNORE_DUPS="1"
+export HIST_REDUCE_BLANKS="1"
