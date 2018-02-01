@@ -1,6 +1,7 @@
 [user]
     email = tom@chillidonut.com
     name = Tom McKenzie
+    signingkey = 896D4BE5
 
 [color]
     branch = auto
@@ -26,15 +27,28 @@
 [help]
     autocorrect = 10
 
-[push]
-    default = simple
+[diff]
+    tool = default-difftool
+
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 
 [alias]
-    fancy-log  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
-    branches = for-each-ref --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:iso8601) %(color:white)%(objectname:short) %09%(color:yellow)%(refname:short) %09%(color:white)%(upstream:track) %(contents:subject)' refs/heads --no-merged
-    edit-conflicted = ! git diff --name-only | uniq | xargs subl
+    fancy-log = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+    branches = for-each-ref --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:relative) %09%(color:white)%(objectname:short) %(color:yellow)%(refname:short) %09%(color:white)%(upstream:track) %(contents:subject)' refs/heads --no-merged
+    timesheet = log --pretty=format:"%C(yellow)%h%Creset  %C(green)%ad%Creset  %C(cyan)%s" --author="`git config --get user.name`" --since='6am'
+    edit-conflicted = ! git diff --name-only | uniq | xargs code
+    history = log -p --
+	pushf = push --force-with-lease
+
 [core]
-	editor = subl -w
+	editor = vim
 	excludesfile = ~/.gitignore-global
 	whitespace = tab-in-indent,trailing-space,space-before-tab
 	ignorecase = false
+
+[merge]
+	tool = code
+
+[push]
+	default = upstream

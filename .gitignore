@@ -1,4 +1,4 @@
-### OSX ###
+# OSX
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -7,11 +7,7 @@ Icon
 # Thumbnails
 ._*
 
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-### SublimeText ###
+# Sublime3
 *.sublime-workspace
 Sublime3/User/Package Control.last-run
 Sublime3/User/Package Control.ca-list
@@ -20,22 +16,5 @@ Sublime3/User/Package Control.system-ca-bundle
 Sublime3/User/Package Control.cache/
 Sublime3/User/Package Control.ca-certs/
 
-### Rails ###
-*.rbc
-*.sassc
-.sass-cache
-.rspec
-.rvmrc
-/.bundle
-/vendor/bundle
-/log/*
-/tmp/*
-/db/*.sqlite3
-/public/system/*
-/coverage/
-/spec/tmp/*
-**.orig
-.project
-
-### Other
+# local backups
 bak/
