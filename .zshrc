@@ -17,5 +17,3 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='code'
 fi
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
