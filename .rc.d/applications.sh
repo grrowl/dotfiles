@@ -5,8 +5,8 @@ if [ -d "${HOME}/.nvm" ]; then
 fi
 
 # export golang bin path
-if [ -d "/usr/local/opt/go/libexec" ]; then
-  export PATH=$PATH:/usr/local/opt/go/libexec/bin
+if [ -d "~/go/bin" ]; then
+  export PATH=$PATH:~/go/bin
 fi
 
 # thefuck
