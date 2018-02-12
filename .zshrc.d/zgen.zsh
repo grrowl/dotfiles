@@ -18,9 +18,9 @@ if ! zgen saved; then
   # bulk load
   zgen loadall <<EOPLUGINS
     mreinhardt/sfz-prompt.zsh
-    zsh-users/zsh-autosuggestions
-    zsh-users/zsh-history-substring-search
     zsh-users/zsh-syntax-highlighting
+    zsh-users/zsh-history-substring-search
+    zsh-users/zsh-autosuggestions
 EOPLUGINS
   # ^ can't indent this EOPLUGINS
 
@@ -60,7 +60,7 @@ prompt_sfz_git_dirty() {
 }
 
 # customise zsh-history-substring-search
-HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bold"
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="underline"
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="none"
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
