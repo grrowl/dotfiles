@@ -40,6 +40,7 @@
     edit-conflicted = ! git diff --name-only | uniq | xargs code
     history = log -p --
 	pushf = push --force-with-lease
+    pullall = ! git pull && git submodule update --init --recursive --remote
 
 [core]
 	editor = vim
@@ -49,6 +50,7 @@
 
 [merge]
 	tool = code
+	conflictstyle = diff3
 
 [push]
 	default = upstream

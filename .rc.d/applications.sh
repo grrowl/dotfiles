@@ -5,8 +5,8 @@ if [ -d "${HOME}/.nvm" ]; then
 fi
 
 # export golang bin path
-if [ -d "~/go/bin" ]; then
-  export PATH=$PATH:~/go/bin
+if [ -d "$HOME/go/bin" ]; then
+  export PATH=$PATH:$HOME/go/bin
 fi
 
 # thefuck
