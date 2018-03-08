@@ -58,8 +58,6 @@ prompt_sfz_git_dirty() {
 # customise zsh-history-substring-search
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="underline"
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="none"
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
 
 # customise zsh-syntax-highlighting
 ZSH_HIGHLIGHT_STYLES[unknown-token]='none'
