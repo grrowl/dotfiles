@@ -18,3 +18,6 @@ Sublime3/User/Package Control.ca-certs/
 
 # local backups
 bak/
+
+# local additions
+**/local.*sh
