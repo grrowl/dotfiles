@@ -10,5 +10,7 @@
       { "key": "auto_complete_visible" }
     ]
   },
-
+  { "keys": ["super+k", "super+shift+z"], "command": "zoom_pane", "args": {"fraction": 0.9} },
+  { "keys": ["super+k", "super+z"], "command": "toggle_zoom_pane", "args": {"fraction": 0.8} },
+  { "keys": ["super+b"], "command": "toggle_side_bar" }
 ]

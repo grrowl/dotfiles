@@ -3,13 +3,20 @@
 	[
 		"deconstruct",
 		"params",
-		"redux"
+		"redux",
+		"middleware",
+		"placeholder",
+		"fallback",
+		"placeholders"
 	],
 	"always_show_minimap_viewport": true,
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_with_fields": true,
 	"auto_find_in_selection": true,
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/User/SublimeLinter/Material-Theme-Darker-OceanicNext (SL).tmTheme",
+	"color_scheme": "Packages/ayu/ayu-dark.tmTheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
+	"draw_centered": true,
 	"draw_minimap_border": true,
 	"enable_tab_scrolling": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -42,7 +49,8 @@
 		".DS_Store",
 		"*.js.map",
 		"webpack.records.json",
-		"records.json"
+		"records.json",
+		".eslintcache"
 	],
 	"folder_exclude_patterns":
 	[
@@ -59,7 +67,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Sass",
+		"CSS3",
 		"TypeScript-for-JS",
 		"Vintage",
 		"Web Inspector 3"
@@ -69,16 +77,6 @@
 		"draw_normal",
 		"draw_active"
 	],
-	"material_theme_accent_lime": false,
-	"material_theme_compact_panel": true,
-	"material_theme_compact_sidebar": true,
-	"material_theme_contrast_mode": true,
-	"material_theme_disable_fileicons": true,
-	"material_theme_small_statusbar": true,
-	"material_theme_small_tab": true,
-	"material_theme_tabs_autowidth": true,
-	"node_path": "/Users/tom/.nvm/versions/node/v5.6.0/bin/node",
-	"open_files_in_new_window": false,
 	"rulers":
 	[
 		80,
@@ -87,11 +85,11 @@
 	],
 	"scroll_past_end": true,
 	"scroll_speed": 1.5,
-	"show_encoding": true,
+	"show_encoding": false,
 	"show_full_path": true,
-	"show_line_endings": true,
+	"show_line_endings": false,
 	"tab_size": 2,
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"theme": "ayu-dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
