@@ -41,6 +41,7 @@
     history = log -p --
 	pushf = push --force-with-lease
     pullall = ! git pull && git submodule update --init --recursive --remote
+    publish = ! git push -u origin `git rev-parse --abbrev-ref HEAD`
 
 [core]
 	editor = vim

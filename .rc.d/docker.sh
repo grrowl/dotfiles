@@ -16,4 +16,7 @@ if [ $(which docker) ]; then
   alias pryweb="docker attach $(docker ps -q --filter Name=apiactivepipecom_web_1)"
   alias pryprefs="docker attach $(docker ps -q --filter Name=apiactivepipecom_prefs_1)"
   alias prysidekiq="docker attach $(docker ps -q --filter Name=apiactivepipecom_sidekiq_1)"
+
+  alias dall="docker ps -aq"
+  alias diall="docker images -q"
 fi
