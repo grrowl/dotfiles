@@ -1,1 +1,1 @@
-cp /Users/tom/Library/Application\ Support/Code/User/settings.json ./User/settings.json
+grep -v 'oauth' /Users/tom/Library/Application\ Support/Code/User/settings.json > ./User/settings.json
