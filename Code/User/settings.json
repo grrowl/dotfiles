@@ -9,9 +9,10 @@
         100
     ],
     "files.autoSave": "off",
-    "workbench.iconTheme": "eq-material-theme-icons",
-    "editor.minimap.enabled": false,
-    "editor.minimap.maxColumn": 100,
+    "editor.minimap.enabled": true,
+    "editor.minimap.maxColumn": 40,
+    // unsupported, but works:
+    "editor.scrollbar.verticalScrollbarSize": 5,
     "editor.renderIndentGuides": true,
     "typescript.check.npmIsInstalled": false,
     "javascript.validate.enable": true,
@@ -23,7 +24,7 @@
     "git.confirmSync": false,
     "workbench.sideBar.location": "right",
     "files.insertFinalNewline": true,
-    "window.title": "${activeEditorMedium}${separator}${folderName}${separator}${dirty}",
+    "window.title": "${activeEditorMedium}${separator}${folderName}${separator}${rootName}${separator}${dirty}",
     "gitlens.advanced.menus": {
         "editorContext": {
             "blame": true,
@@ -67,7 +68,6 @@
     },
     // "editor.glyphMargin": false,
     "ruby.rubocop.executePath": "/Users/tom/.rbenv/shims/",
-    "sublimeTextKeymap.promptV3Features": true,
     "editor.snippetSuggestions": "top",
     "editor.formatOnPaste": false,
     "search.useIgnoreFiles": true,
@@ -99,11 +99,11 @@
         "~/Documents/activepipe",
         "~/Documents/repos"
     ],
-    "workbench.colorTheme": "Dark+ (contrast)",
+    "workbench.colorTheme": "Monokai", // or Dark+ (contrast)
     "workbench.colorCustomizations": {
         "[Dark+ (contrast)]": {
             "activityBar.background": "#000000",
-            "sideBar.background": "#000000",
+            "sideBar.background": "#050505",
             "sideBar.border": "#333",
             "editorGroup.background": "#151515",
             "editorGroupHeader.tabsBackground": "#151515",
@@ -112,11 +112,12 @@
             "editorWidget.background": "#151515",
             "editorWidget.border": "#666",
             "editor.lineHighlightBorder": "#151515",
-            "titleBar.border": "#333333"
+            "titleBar.border": "#333333",
+            // "statusBar.background": "#334455",
+            "editorIndentGuide.activeBackground": "#555555"
         },
     },
     "bookmarks.navigateThroughAllFiles": true,
-    "editor.folding": false,
     "debug.openExplorerOnEnd": true,
     "scm.diffDecorationsGutterWidth": 2,
     "workbench.statusBar.feedback.visible": false,
@@ -132,8 +133,9 @@
         "suppressResultsExplorerNotice": true,
         "suppressShowKeyBindingsNotice": true
     },
-    "githubNotificationsBell.icon": "pulse",
-    "githubNotificationsBell.colorParticipating": "#F4F9FF",
+    "githubNotificationsBell.icon": "pulse", // pulse, mark-github
+    "githubNotificationsBell.colorParticipating": "#61bfd3",
+    // "githubNotificationsBell.colorParticipating": "#F44400",
     "gitTreeCompare.iconsMinimal": true,
     "gitlens.explorers.avatars": false,
     "gitlens.gitExplorer.enabled": false,
@@ -158,5 +160,25 @@
     "gitlens.statusBar.reduceFlicker": true,
     "git.enableSmartCommit": true,
     "git.defaultCloneDirectory": "/Users/tom/Documents/repos",
-    "bracketPairColorizer.highlightActiveScope": true
+    "terminal.external.osxExec": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+    "bracketPairColorizer.highlightActiveScope": true,
+    "bracketPairColorizer.scopeLineCSS": [
+        "borderStyle : dotted",
+        "borderWidth : 1px",
+        "borderColor : {color}; opacity: 0.2"
+    ],
+    "editor.matchBrackets": false,
+    "extensions.ignoreRecommendations": true,
+    "workbench.editor.showTabs": true,
+    "versionlens.showVersionLensesAtStartup": false,
+    "npm.enableScriptExplorer": true,
+    "emojisense.languages": {
+        "markdown": true,
+        "plaintext": {
+            "markupCompletionsEnabled": false,
+            "emojiDecoratorsEnabled": false
+        },
+        "git-commit": true,
+        "todo": true,
+    },
 }
