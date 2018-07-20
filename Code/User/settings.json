@@ -24,7 +24,7 @@
     "git.confirmSync": false,
     "workbench.sideBar.location": "right",
     "files.insertFinalNewline": true,
-    "window.title": "${activeEditorMedium}${separator}${folderName}${separator}${rootName}${separator}${dirty}",
+    "window.title": "${rootName}${separator}${activeEditorMedium} ${dirty}",
     "gitlens.advanced.menus": {
         "editorContext": {
             "blame": true,
@@ -69,13 +69,10 @@
     // "editor.glyphMargin": false,
     "ruby.rubocop.executePath": "/Users/tom/.rbenv/shims/",
     "editor.snippetSuggestions": "top",
-    "editor.formatOnPaste": false,
     "search.useIgnoreFiles": true,
     "explorer.confirmDelete": false,
-    "jest.autoEnable": false,
-    "jest.runAllTestsFirst": false,
     "problems.decorations.enabled": true,
-    "explorer.decorations.colors": false,
+    "explorer.decorations.colors": true,
     "editor.lineNumbers": "interval",
     "flow.pathToFlow": "/Users/tom/.nvm/versions/node/v8.9.4/bin/flow",
     "gitlens.blame.format": "${sha|20?} ${ago|12-}",
@@ -88,8 +85,7 @@
         "Function"
     ],
     "diffEditor.ignoreTrimWhitespace": true,
-    "gitlens.keymap": "none",
-    "gitlens.gitExplorer.view": "history",
+    "gitlens.gitExplorer.view": "repository",
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.blame.highlight.locations": [
         "line",
@@ -99,13 +95,13 @@
         "~/Documents/activepipe",
         "~/Documents/repos"
     ],
-    "workbench.colorTheme": "Monokai", // or Dark+ (contrast)
+    "workbench.colorTheme": "Dark+ (contrast)", // or Dark+ (contrast)
     "workbench.colorCustomizations": {
         "[Dark+ (contrast)]": {
             "activityBar.background": "#000000",
             "sideBar.background": "#050505",
             "sideBar.border": "#333",
-            "editorGroup.background": "#151515",
+            "editorGroup.emptyBackground": "#151515",
             "editorGroupHeader.tabsBackground": "#151515",
             "editorCodeLens.foreground": "#666",
             "editorRuler.foreground": "#151515",
@@ -121,7 +117,7 @@
     "debug.openExplorerOnEnd": true,
     "scm.diffDecorationsGutterWidth": 2,
     "workbench.statusBar.feedback.visible": false,
-    "gitlens.gitExplorer.files.layout": "list",
+    "gitlens.gitExplorer.files.layout": "auto",
     "gitlens.gitExplorer.branches.layout": "list",
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
@@ -137,13 +133,7 @@
     "githubNotificationsBell.colorParticipating": "#61bfd3",
     // "githubNotificationsBell.colorParticipating": "#F44400",
     "gitTreeCompare.iconsMinimal": true,
-    "gitlens.explorers.avatars": false,
-    "gitlens.gitExplorer.enabled": false,
-    "gitlens.historyExplorer.enabled": false,
     "gitlens.codeLens.recentChange.command": "gitlens.diffWithPrevious",
-    "gitlens.currentLine.enabled": false,
-    "gitlens.blame.toggleMode": "window",
-    "gitlens.blame.avatars": false,
     "gitlens.heatmap.toggleMode": "window",
     "gitlens.hovers.annotations.over": "annotation",
     "gitlens.recentChanges.highlight.locations": [
@@ -181,4 +171,49 @@
         "git-commit": true,
         "todo": true,
     },
+    "gitlens.menus": {
+        "editor": {
+            "blame": true,
+            "clipboard": true,
+            "compare": false,
+            "details": true,
+            "history": true,
+            "remote": true
+        },
+        "editorGroup": {
+            "blame": true,
+            "compare": false,
+            "history": true,
+            "remote": true
+        },
+        "editorTab": {
+            "compare": false,
+            "history": true,
+            "remote": true
+        },
+        "explorer": {
+            "compare": false,
+            "history": true,
+            "remote": false
+        }
+    },
+    "gitlens.settings.mode": "advanced",
+    "gitlens.explorers.avatars": false,
+    "gitlens.historyExplorer.enabled": false,
+    "gitlens.currentLine.format": "${agoOrDate} • ${id} • ${message}",
+    "gitlens.blame.avatars": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.blame.ignoreWhitespace": true,
+    "bracketPairColorizer.consecutivePairColors": [
+        "()",
+        "[]",
+        "{}", [
+            "Gold",
+            "Orchid",
+            "LightSkyBlue"
+        ],
+        "Red"
+    ],
+    "prettier.requireConfig": true,
+    "window.vibrancy": true
 }
