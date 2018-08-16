@@ -1,4 +1,4 @@
-if [ $(which docker) ]; then
+if [ $(type docker) ]; then
   alias dredisflush="docker-compose exec redis redis-cli FLUSHALL"
   alias dnewmigration="docker-compose exec web bundle exec rails generate migration"
   alias dmigrate="docker-compose exec web bundle exec rake db:migrate"
