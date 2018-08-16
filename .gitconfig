@@ -32,16 +32,19 @@
 
 [difftool "default-difftool"]
     cmd = code --wait --diff $LOCAL $REMOTE
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [alias]
     fancy-log = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
-    branches = for-each-ref --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:relative) %09%(color:white)%(objectname:short) %(color:yellow)%(refname:short) %09%(color:white)%(upstream:track) %(contents:subject)' refs/heads --no-merged
+    branches = for-each-ref --count=30 --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:relative) %09%(color:white)%(objectname:short) %(color:yellow)%(refname:short) %09%(color:white)%(upstream:track) %(contents:subject)' refs/heads --no-merged
     timesheet = log --pretty=format:"%C(yellow)%h%Creset  %C(green)%ad%Creset  %C(cyan)%s" --author="`git config --get user.name`" --since='6am'
     edit-conflicted = ! git diff --name-only | uniq | xargs code
     history = log -p --
 	pushf = push --force-with-lease
     pullall = ! git pull && git submodule update --init --recursive --remote
     publish = ! git push -u origin `git rev-parse --abbrev-ref HEAD`
+    diverged = ! git log --graph --date=relative --oneline `git rev-parse --abbrev-ref HEAD` origin/`git rev-parse --abbrev-ref HEAD`
 
 [core]
 	editor = vim

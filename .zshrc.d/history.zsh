@@ -2,6 +2,9 @@ HISTFILE=~/.zsh_history
 HISTSIZE=30000
 SAVEHIST=25000
 
+# TODO: see this gist <https://gist.github.com/matthewmccullough/787142>
+
+
 # ignore duplicates (on find and on history file save)
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS

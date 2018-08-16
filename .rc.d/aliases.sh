@@ -13,3 +13,6 @@ if [[ "$(uname -s)" = 'Darwin' ]]; then
   alias get-buffer="$HOME/dotfiles/bin/get-iterm2-buffer"
   alias chrome-tabs="$HOME/dotfiles/bin/chrome-tabs"
 fi
+
+# display docker statuses
+alias dockerps="docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'"
