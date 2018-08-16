@@ -1,4 +1,3 @@
-PeterJausovec.vscode-docker
 Tyriar.sort-lines
 aeschli.vscode-css-formatter
 akfish.vscode-devdocs
@@ -39,9 +38,10 @@ ms-vscode.sublime-keybindings
 ms-vsliveshare.vsliveshare
 msjsdiag.debugger-for-chrome
 paragdiwan.gitpatch
+PeterJausovec.vscode-docker
 pflannery.vscode-versionlens
 qezhu.gitlink
-rebornix.Ruby
+rebornix.ruby
 ricard.postcss
 sadesyllas.vscode-workspace-switcher
 sandy081.todotasks

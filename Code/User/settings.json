@@ -25,56 +25,22 @@
     "workbench.sideBar.location": "right",
     "files.insertFinalNewline": true,
     "window.title": "${rootName}${separator}${activeEditorMedium} ${dirty}",
-    "gitlens.advanced.menus": {
-        "editorContext": {
-            "blame": true,
-            "copy": true,
-            "details": true,
-            "fileDiff": false,
-            "history": true,
-            "lineDiff": false,
-            "remote": true
-        },
-        "editorTitle": {
-            "blame": true,
-            "fileDiff": false,
-            "history": true,
-            "remote": true,
-            "status": true
-        },
-        "editorTitleContext": {
-            "blame": true,
-            "fileDiff": false,
-            "history": true,
-            "remote": true
-        },
-        "explorerContext": {
-            "fileDiff": false,
-            "history": true,
-            "remote": true
-        }
-    },
     "editor.multiCursorModifier": "ctrlCmd",
     "workbench.startupEditor": "none",
     "workbench.activityBar.visible": true,
     "files.associations": {
         "*.js": "javascriptreact"
     },
-    "emmet.syntaxProfiles": {
-        "javascript": "jsx"
-    },
     "[ruby]": {
         "editor.wordWrap": "on"
     },
     // "editor.glyphMargin": false,
-    "ruby.rubocop.executePath": "/Users/tom/.rbenv/shims/",
     "editor.snippetSuggestions": "top",
     "search.useIgnoreFiles": true,
     "explorer.confirmDelete": false,
     "problems.decorations.enabled": true,
     "explorer.decorations.colors": true,
     "editor.lineNumbers": "interval",
-    "flow.pathToFlow": "/Users/tom/.nvm/versions/node/v8.9.4/bin/flow",
     "gitlens.blame.format": "${sha|20?} ${ago|12-}",
     "gitlens.codeLens.scopes": [
         "document",
@@ -95,7 +61,7 @@
         "~/Documents/activepipe",
         "~/Documents/repos"
     ],
-    "workbench.colorTheme": "Dark+ (contrast)", // or Dark+ (contrast)
+    "workbench.colorTheme": "Night Owl", // or Dark+ (contrast)
     "workbench.colorCustomizations": {
         "[Dark+ (contrast)]": {
             "activityBar.background": "#000000",
@@ -214,6 +180,10 @@
         ],
         "Red"
     ],
+    "extensions.showRecommendationsOnlyOnDemand": true,
     "prettier.requireConfig": true,
-    "window.vibrancy": true
+    "window.vibrancy": true,
+    "javascript.updateImportsOnFileMove.enabled": "prompt",
+    "search.smartCase": true,
+    "search.location": "panel"
 }
