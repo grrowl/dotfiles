@@ -1,6 +1,19 @@
+# set up
+if [ ! -d "${HOME}/.zsh/completion" ]; then
+  mkdir -p "${HOME}/.zsh/completion"
+
+  echo 'Downloading completions'
+  curl -L https://raw.githubusercontent.com/docker/compose/1.23.1/contrib/completion/zsh/_docker-compose > ${HOME}/.zsh/completion/_docker-compose
+  curl -L https://raw.githubusercontent.com/docker/cli/18.09/contrib/completion/zsh/_docker > ${HOME}/.zsh/completion/_docker
+fi
+
+fpath=(${HOME}/.zsh/completion $fpath)
+
 # make autocompletion faster by caching
 autoload -Uz compinit
+
 compinit -d "$HOME/.zsh/cache/zcompdump"
+
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path $HOME/.zsh/cache
 

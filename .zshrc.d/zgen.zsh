@@ -28,6 +28,8 @@ fi
 # customise sfz-prompt
 PROMPT_SFZ_CHAR="›"
 
+setopt TRANSIENT_RPROMPT
+
 prompt_sfz_colors () {
   case $1 in
     grey)     echo "{234}";;
@@ -54,6 +56,14 @@ prompt_sfz_colors () {
 prompt_sfz_git_dirty() {
   # too expensive
 }
+
+# bind to zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# customize zsh-autosuggestions
+ZSH_AUTOSUGGEST_USE_ASYNC="true"
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="60"
 
 # customise zsh-history-substring-search
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="underline"

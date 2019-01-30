@@ -48,7 +48,7 @@
 
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore-global
+	excludesfile = /Users/tom/.gitignore_global
 	whitespace = tab-in-indent,trailing-space,space-before-tab
 	ignorecase = false
 
@@ -58,3 +58,8 @@
 
 [push]
 	default = upstream
+[status]
+	submoduleSummary = true
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P
