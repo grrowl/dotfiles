@@ -1,3 +1,6 @@
+# ensure /usr/local/bin is in path
+export PATH=/usr/local/bin:$PATH
+
 if [[ $- != *i* ]] ; then
   # shell is non-interactive. be done now!
   return

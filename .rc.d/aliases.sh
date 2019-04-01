@@ -6,7 +6,7 @@ alias lt='ls -ltFh'   # long list,sorted by date,show type,human readable
 alias ll='ls -l'      # long list
 
 # http
-alias start-http='python -m SimpleHTTPServer'
+alias http-server='python -m SimpleHTTPServer'
 
 # osx-only aliases
 if [[ "$(uname -s)" = 'Darwin' ]]; then

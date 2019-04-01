@@ -16,8 +16,10 @@ if ! zgen saved; then
   zgen loadall <<EOPLUGINS
     mreinhardt/sfz-prompt.zsh
     zsh-users/zsh-autosuggestions
-    zsh-users/zsh-history-substring-search
+    lukechilds/zsh-better-npm-completion
     zsh-users/zsh-syntax-highlighting
+    zsh-users/zsh-history-substring-search
+
 EOPLUGINS
   # ^ can't indent this EOPLUGINS
 
