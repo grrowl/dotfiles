@@ -1,7 +1,7 @@
 {
     "window.zoomLevel": 0,
-    "editor.fontFamily": "Inconsolata, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 14,
+    "editor.fontFamily": "Inconsolata-g, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 12,
     "editor.tabSize": 2,
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [
@@ -29,7 +29,8 @@
     "workbench.startupEditor": "none",
     "workbench.activityBar.visible": true,
     "files.associations": {
-        "*.js": "javascriptreact"
+        "*.js": "javascriptreact",
+        "*.svg": "xml"
     },
     "[ruby]": {
         "editor.wordWrap": "on"
@@ -85,19 +86,7 @@
     "workbench.statusBar.feedback.visible": false,
     "gitlens.gitExplorer.files.layout": "auto",
     "gitlens.gitExplorer.branches.layout": "list",
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": true,
-        "suppressShowKeyBindingsNotice": true
-    },
     "githubNotificationsBell.icon": "pulse", // pulse, mark-github
-    "githubNotificationsBell.colorParticipating": "#61bfd3",
-    // "githubNotificationsBell.colorParticipating": "#F44400",
     "gitTreeCompare.iconsMinimal": true,
     "gitlens.codeLens.recentChange.command": "gitlens.diffWithPrevious",
     "gitlens.heatmap.toggleMode": "window",
@@ -112,17 +101,10 @@
     "gitlens.statusBar.alignment": "left",
     "gitlens.statusBar.format": "${ago}: \"${message}\"",
     "editor.find.seedSearchStringFromSelection": false,
-    "gitlens.resultsExplorer.files.layout": "auto",
     "gitlens.statusBar.reduceFlicker": true,
     "git.enableSmartCommit": true,
     "git.defaultCloneDirectory": "/Users/tom/Documents/repos",
     "terminal.external.osxExec": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
-    "bracketPairColorizer.highlightActiveScope": true,
-    "bracketPairColorizer.scopeLineCSS": [
-        "borderStyle : dotted",
-        "borderWidth : 1px",
-        "borderColor : {color}; opacity: 0.2"
-    ],
     "editor.matchBrackets": false,
     "extensions.ignoreRecommendations": true,
     "workbench.editor.showTabs": true,
@@ -164,26 +146,53 @@
         }
     },
     "gitlens.settings.mode": "advanced",
-    "gitlens.explorers.avatars": false,
-    "gitlens.historyExplorer.enabled": false,
     "gitlens.currentLine.format": "${agoOrDate} • ${id} • ${message}",
     "gitlens.blame.avatars": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.blame.ignoreWhitespace": true,
-    "bracketPairColorizer.consecutivePairColors": [
-        "()",
-        "[]",
-        "{}", [
-            "Gold",
-            "Orchid",
-            "LightSkyBlue"
-        ],
-        "Red"
-    ],
     "extensions.showRecommendationsOnlyOnDemand": true,
     "prettier.requireConfig": true,
-    "window.vibrancy": true,
-    "javascript.updateImportsOnFileMove.enabled": "prompt",
+    "javascript.updateImportsOnFileMove.enabled": "always",
     "search.smartCase": true,
-    "search.location": "panel"
+    "search.location": "panel",
+    "breadcrumbs.enabled": true,
+    "explorer.confirmDragAndDrop": false,
+    "nasc-touchbar.addCursorBelow": false,
+    "nasc-touchbar.togglePanel": false,
+    "nasc-touchbar.showCommands": true,
+    "macros": {
+        "autoFixAll": [
+            "tslint.fixAllProblems",
+            "eslint.executeAutofix",
+        ]
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "workbench.statusBar.visible": true,
+    "git.detectSubmodules": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "ruby.rubocop.onSave": false,
+    "gitlens.views.repositories.branches.layout": "list",
+    "gitlens.views.fileHistory.enabled": false,
+    "gitlens.views.lineHistory.enabled": false,
+    "gitlens.views.compare.files.layout": "auto",
+    "gitlens.views.search.files.layout": "auto",
+    "diffEditor.renderSideBySide": true,
+    "yaml.schemas": {
+        "none": "pipeline.yaml"
+    },
+    "editor.smoothScrolling": true,
+    "typescript.suggest.completeFunctionCalls": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "terminal.integrated.copyOnSelection": true,
+    "gitlens.views.compare.avatars": false,
+    "gitlens.views.repositories.avatars": false,
+    "gitlens.views.search.avatars": false,
+    "editor.minimap.renderCharacters": false,
+    "errorLens.addAnnotationTextPrefixes": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "bracket-pair-colorizer-2.highlightActiveScope": true,
+    "spellright.groupDictionaries": false,
+    "errorLens.enabledDiagnosticLevels": [],
+    "gitTreeCompare.diffMode": "full"
 }
