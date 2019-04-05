@@ -12,5 +12,14 @@
   },
   { "keys": ["super+k", "super+shift+z"], "command": "zoom_pane", "args": {"fraction": 0.9} },
   { "keys": ["super+k", "super+z"], "command": "toggle_zoom_pane", "args": {"fraction": 0.8} },
-  { "keys": ["super+b"], "command": "toggle_side_bar" }
+  { "keys": ["super+b"], "command": "toggle_side_bar" },
+  {
+    "keys": ["ctrl+shift+s"], "command": "toggle_color_scheme",
+    "args": {
+      "light_color_scheme": "Packages/ayu/ayu-light.tmTheme",
+      "dark_color_scheme": "Packages/ayu/ayu-dark.tmTheme",
+      "light_theme": "ayu-light.sublime-theme",
+      "dark_theme": "ayu-dark.sublime-theme"
+    }
+  }
 ]

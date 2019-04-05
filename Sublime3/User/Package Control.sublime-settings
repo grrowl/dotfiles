@@ -20,11 +20,11 @@
 		"PowerShell",
 		"Pretty JSON",
 		"SCSS",
+		"WordCount",
 		"Wrap Plus",
 		"ZSH"
 	],
 	"repositories":
 	[
-		"https://github.com/jdc0589/JsFormat"
 	]
 }
