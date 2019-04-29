@@ -52,15 +52,14 @@
         "Function"
     ],
     "diffEditor.ignoreTrimWhitespace": true,
-    "gitlens.gitExplorer.view": "repository",
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.blame.highlight.locations": [
         "line",
         "overview"
     ],
     "vscodeWorkspaceSwitcher.paths": [
-        "~/Documents/activepipe",
-        "~/Documents/repos"
+        "~/Documents/chillidonut/**/",
+        "~/Documents/repos/**/"
     ],
     "workbench.colorTheme": "Night Owl", // or Dark+ (contrast)
     "workbench.colorCustomizations": {
@@ -84,9 +83,6 @@
     "debug.openExplorerOnEnd": true,
     "scm.diffDecorationsGutterWidth": 2,
     "workbench.statusBar.feedback.visible": false,
-    "gitlens.gitExplorer.files.layout": "auto",
-    "gitlens.gitExplorer.branches.layout": "list",
-    "githubNotificationsBell.icon": "pulse", // pulse, mark-github
     "gitTreeCompare.iconsMinimal": true,
     "gitlens.codeLens.recentChange.command": "gitlens.diffWithPrevious",
     "gitlens.heatmap.toggleMode": "window",
@@ -157,9 +153,6 @@
     "search.location": "panel",
     "breadcrumbs.enabled": true,
     "explorer.confirmDragAndDrop": false,
-    "nasc-touchbar.addCursorBelow": false,
-    "nasc-touchbar.togglePanel": false,
-    "nasc-touchbar.showCommands": true,
     "macros": {
         "autoFixAll": [
             "tslint.fixAllProblems",
@@ -170,7 +163,6 @@
     "workbench.statusBar.visible": true,
     "git.detectSubmodules": false,
     "workbench.editor.highlightModifiedTabs": true,
-    "ruby.rubocop.onSave": false,
     "gitlens.views.repositories.branches.layout": "list",
     "gitlens.views.fileHistory.enabled": false,
     "gitlens.views.lineHistory.enabled": false,
@@ -193,6 +185,29 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "bracket-pair-colorizer-2.highlightActiveScope": true,
     "spellright.groupDictionaries": false,
+    // "spellright.documentTypes": [
+    //     "typescript",
+    //     "typescriptreact"
+    // ],
+    "spellright.notificationClassByParser": {
+        "code": "information"
+    },
+    "spellright.languageContext": {
+        "strings": [ "en-US" ],
+        "comments": [ "en-GB" ]
+    },
     "errorLens.enabledDiagnosticLevels": [],
-    "gitTreeCompare.diffMode": "full"
+    "gitTreeCompare.diffMode": "full",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vscodeWorkspaceSwitcher.showInExplorer": true,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vscodeWorkspaceSwitcher.showInActivityBar": false,
+    "terminal.explorerKind": "external",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
 }
