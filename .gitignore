@@ -1,0 +1,5 @@
+.DS_Store
+
+# local-only rc
+.rc.d/local.sh
+.zshrc.d/local.zsh
