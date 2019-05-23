@@ -1,3 +1,60 @@
-// Place your key bindings in this file to override the defaults
+// Place your key bindings in this file to override the defaultsauto[]
 [
+  {
+    "key": "cmd+k cmd+j",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "cmd+k cmd+z",
+    "command": "workbench.action.maximizeEditor"
+  },
+  {
+    "key": "cmd+k shift+cmd+z",
+    "command": "workbench.action.evenEditorWidths"
+  },
+  {
+    "key": "cmd+k cmd+z",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+cmd+/",
+    "command": "-liveshare.followToTheSide",
+    "when": "liveshare:hasCollaborators"
+  },
+  {
+    "key": "alt+cmd+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+k cmd+u",
+    "command": "editor.action.transformToUppercase"
+  },
+  {
+    "key": "cmd+k cmd+l",
+    "command": "editor.action.transformToLowercase"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "editor.emmet.action.wrapWithAbbreviation"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "-editor.action.transposeLetters",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "extension.transpose"
+  },
+  {
+    "key": "cmd+h",
+    "command": "workbench.files.action.collapseExplorerFolders"
+  }
 ]

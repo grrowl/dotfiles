@@ -196,7 +196,7 @@
         "strings": [ "en-US" ],
         "comments": [ "en-GB" ]
     },
-    "errorLens.enabledDiagnosticLevels": [],
+    "errorLens.enabledDiagnosticLevels": ["error"],
     "gitTreeCompare.diffMode": "full",
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -209,5 +209,19 @@
     "terminal.explorerKind": "external",
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
-    }
+    },
+    "gitlens.views.repositories.location": "gitlens",
+    "gitlens.views.fileHistory.location": "gitlens",
+    "gitlens.views.lineHistory.location": "gitlens",
+    "gitlens.views.compare.location": "gitlens",
+    "gitlens.views.search.location": "gitlens",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // VERY TEMPORARY
+    "typescript.tsdk": "/Users/tom/Documents/scratch/npm_typescript/node_modules/typescript/lib"
+
 }

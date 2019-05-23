@@ -14,7 +14,6 @@ EditorConfig.EditorConfig
 eg2.vscode-npm-script
 eriklynd.json-tools
 esbenp.prettier-vscode
-gcazaciuc.vscode-flow-ide
 geddski.macros
 GitHub.vscode-pull-request-github
 hbenl.vscode-firefox-debug
@@ -24,6 +23,7 @@ idleberg.applescript
 JakeBecker.elixir-ls
 jpoissonnier.vscode-styled-components
 k3a.theme-dark-plus-contrast
+karunamurti.haml
 KnisterPeter.vscode-github
 kumar-harsh.graphql-for-vscode
 letmaik.git-tree-compare
@@ -37,6 +37,7 @@ ms-vscode.vscode-typescript-tslint-plugin
 ms-vsliveshare.vsliveshare
 msjsdiag.debugger-for-chrome
 mushan.vscode-open-iterm2
+naumovs.color-highlight
 paragdiwan.gitpatch
 PeterJausovec.vscode-docker
 pflannery.vscode-versionlens
@@ -59,3 +60,4 @@ vilicvane.es-quotes
 VisualStudioExptTeam.vscodeintellicode
 wix.glean
 xabikos.JavaScriptSnippets
+yorkxin.coffeescript-support
