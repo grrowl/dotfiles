@@ -36,7 +36,6 @@
         "editor.wordWrap": "on"
     },
     // "editor.glyphMargin": false,
-    "editor.snippetSuggestions": "top",
     "search.useIgnoreFiles": true,
     "explorer.confirmDelete": false,
     "problems.decorations.enabled": true,
@@ -221,7 +220,9 @@
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "emmet.triggerExpansionOnTab": true,
     // VERY TEMPORARY
-    "typescript.tsdk": "/Users/tom/Documents/scratch/npm_typescript/node_modules/typescript/lib"
+    "typescript.tsdk": "/Users/tom/Documents/scratch/npm_typescript/node_modules/typescript/lib",
+    "merge-conflict.autoNavigateNextConflict.enabled": true
 
 }
