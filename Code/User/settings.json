@@ -36,7 +36,6 @@
         "editor.wordWrap": "on"
     },
     // "editor.glyphMargin": false,
-    "editor.snippetSuggestions": "top",
     "search.useIgnoreFiles": true,
     "explorer.confirmDelete": false,
     "problems.decorations.enabled": true,
@@ -222,4 +221,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "vtools.autoHideSideBar": true
+    "emmet.triggerExpansionOnTab": true,
+    "merge-conflict.autoNavigateNextConflict.enabled": true
 }

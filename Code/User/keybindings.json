@@ -56,5 +56,13 @@
   {
     "key": "cmd+h",
     "command": "workbench.files.action.collapseExplorerFolders"
+  },
+  {
+    "key": "cmd+, cmd+,",
+    "command": "workbench.action.openSettings"
+  },
+  {
+    "key": "cmd+,",
+    "command": "-workbench.action.openSettings"
   }
 ]
