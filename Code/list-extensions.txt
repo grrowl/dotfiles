@@ -42,7 +42,6 @@ paragdiwan.gitpatch
 PeterJausovec.vscode-docker
 pflannery.vscode-versionlens
 PhilHindle.errorlens
-planbcoding.vscode-react-refactor
 qezhu.gitlink
 rebornix.ruby
 redhat.vscode-yaml

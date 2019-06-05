@@ -221,7 +221,5 @@
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    // VERY TEMPORARY
-    "typescript.tsdk": "/Users/tom/Documents/scratch/npm_typescript/node_modules/typescript/lib"
-
+    "vtools.autoHideSideBar": true
 }
