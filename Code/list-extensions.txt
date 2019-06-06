@@ -55,6 +55,7 @@ stkb.rewrap
 timonwong.shellcheck
 Tyriar.sort-lines
 v4run.transpose
+venryx.vscode-vtools
 vilicvane.es-quotes
 VisualStudioExptTeam.vscodeintellicode
 wix.glean
