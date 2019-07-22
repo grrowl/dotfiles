@@ -184,10 +184,6 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "bracket-pair-colorizer-2.highlightActiveScope": true,
     "spellright.groupDictionaries": false,
-    // "spellright.documentTypes": [
-    //     "typescript",
-    //     "typescriptreact"
-    // ],
     "spellright.notificationClassByParser": {
         "code": "information"
     },
@@ -205,7 +201,13 @@
     "gitlens.views.lineHistory.location": "gitlens",
     "gitlens.views.compare.location": "gitlens",
     "gitlens.views.search.location": "gitlens",
-    "vtools.autoHideSideBar": true,
     "emmet.triggerExpansionOnTab": true,
-    "merge-conflict.autoNavigateNextConflict.enabled": true
+    "merge-conflict.autoNavigateNextConflict.enabled": true,
+    "search.usePCRE2": true,
+    "editor.gotoLocation.multiple": "goto",
+    "nasc-touchbar.togglePanel": false,
+    "nasc-touchbar.addCursorBelow": false,
+    "diffEditor.originalEditable": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.snippetSuggestions": "bottom"
 }
