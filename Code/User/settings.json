@@ -91,7 +91,6 @@
         "overview"
     ],
     "gitlens.hovers.annotations.changes": false,
-    "gitlens.hovers.currentLine.details": false,
     "gitlens.recentChanges.toggleMode": "window",
     "gitlens.statusBar.alignment": "left",
     "gitlens.statusBar.format": "${ago}: \"${message}\"",
@@ -209,5 +208,8 @@
     "nasc-touchbar.addCursorBelow": false,
     "diffEditor.originalEditable": true,
     "emmet.showSuggestionsAsSnippets": true,
-    "editor.snippetSuggestions": "bottom"
+    "editor.snippetSuggestions": "bottom",
+    "editor.wordBasedSuggestions": false,
+    "gitlens.hovers.currentLine.details": false,
+    "gitlens.hovers.currentLine.enabled": false
 }
