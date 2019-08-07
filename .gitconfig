@@ -46,6 +46,7 @@
     publish = ! git push -u origin `git rev-parse --abbrev-ref HEAD`
     diverged = ! git log --graph --date=relative --oneline `git rev-parse --abbrev-ref HEAD` origin/`git rev-parse --abbrev-ref HEAD`
     fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
+    last = log -n 1 --pretty=format:%H --
 [core]
 	editor = vim
 	excludesfile = /Users/tom/.gitignore_global
