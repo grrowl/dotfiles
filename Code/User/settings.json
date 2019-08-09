@@ -60,7 +60,7 @@
         "~/Documents/chillidonut/**/",
         "~/Documents/repos/**/"
     ],
-    "workbench.colorTheme": "Night Owl", // or Dark+ (contrast)
+    "workbench.colorTheme": "Dark+ (contrast)", // Night Owl or Dark+ (contrast)
     "workbench.colorCustomizations": {
         "[Dark+ (contrast)]": {
             "activityBar.background": "#000000",
@@ -76,7 +76,7 @@
             "titleBar.border": "#333333",
             // "statusBar.background": "#334455",
             "editorIndentGuide.activeBackground": "#555555"
-        },
+        }
     },
     "bookmarks.navigateThroughAllFiles": true,
     "debug.openExplorerOnEnd": true,
@@ -153,8 +153,9 @@
     "explorer.confirmDragAndDrop": false,
     "macros": {
         "autoFixAll": [
-            "tslint.fixAllProblems",
             "eslint.executeAutofix",
+            "editor.action.fixAll",
+
         ]
     },
     "typescript.updateImportsOnFileMove.enabled": "always",
@@ -178,7 +179,6 @@
     "gitlens.views.repositories.avatars": false,
     "gitlens.views.search.avatars": false,
     "editor.minimap.renderCharacters": false,
-    "errorLens.addAnnotationTextPrefixes": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "bracket-pair-colorizer-2.highlightActiveScope": true,
@@ -200,6 +200,12 @@
     "gitlens.views.lineHistory.location": "gitlens",
     "gitlens.views.compare.location": "gitlens",
     "gitlens.views.search.location": "gitlens",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "emmet.triggerExpansionOnTab": true,
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "search.usePCRE2": true,
@@ -212,4 +218,5 @@
     "editor.wordBasedSuggestions": false,
     "gitlens.hovers.currentLine.details": false,
     "gitlens.hovers.currentLine.enabled": false
+    "errorLens.addAnnotationTextPrefixes": false
 }

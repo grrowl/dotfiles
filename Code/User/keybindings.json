@@ -76,6 +76,10 @@
     "key": "cmd+, cmd+.",
     "command": "macros.autoFixAll"
   },
+  {
+    "key": "cmd+, cmd+/",
+    "command": "editor.action.fixAll"
+  },
   // Focus editors and groups by cmd+number keys
   {
     "key": "cmd+1",
@@ -124,5 +128,5 @@
   {
     "key": "cmd+shift+3",
     "command": "workbench.action.focusThirdEditorGroup"
-  },
+  }
 ]
