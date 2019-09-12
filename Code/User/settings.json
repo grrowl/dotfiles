@@ -139,7 +139,6 @@
             "remote": false
         }
     },
-    "gitlens.settings.mode": "advanced",
     "gitlens.currentLine.format": "${agoOrDate} • ${id} • ${message}",
     "gitlens.blame.avatars": false,
     "gitlens.currentLine.enabled": false,
@@ -187,10 +186,13 @@
         "code": "information"
     },
     "spellright.languageContext": {
-        "strings": [ "en-US" ],
-        "comments": [ "en-GB" ]
+        "strings": [
+            "en-US"
+        ],
+        "comments": [
+            "en-GB"
+        ]
     },
-    "errorLens.enabledDiagnosticLevels": ["error"],
     "gitTreeCompare.diffMode": "full",
     "vscodeWorkspaceSwitcher.showInExplorer": true,
     "vscodeWorkspaceSwitcher.showInActivityBar": false,
@@ -208,7 +210,6 @@
     },
     "emmet.triggerExpansionOnTab": true,
     "merge-conflict.autoNavigateNextConflict.enabled": true,
-    "search.usePCRE2": true,
     "editor.gotoLocation.multiple": "goto",
     "nasc-touchbar.togglePanel": false,
     "nasc-touchbar.addCursorBelow": false,
@@ -217,6 +218,17 @@
     "editor.snippetSuggestions": "bottom",
     "editor.wordBasedSuggestions": false,
     "gitlens.hovers.currentLine.details": false,
-    "gitlens.hovers.currentLine.enabled": false
-    "errorLens.addAnnotationTextPrefixes": false
+    "gitlens.hovers.currentLine.enabled": false,
+    "errorLens.addAnnotationTextPrefixes": false,
+    "errorLens.errorBackground": "rgba(100,0,0,0.3)",
+    "errorLens.errorForeground": "rgba(220,90,90,0.6)",
+    // "errorLens.exclude": [
+    //     {
+    //         // Module has no exported member
+    //         "code": "2305",
+    //         "source": "ts"
+    //     },
+    // ],
+    "errorLens.followCursor": "closestProblem",
+    "errorLens.followCursorMore": 2
 }

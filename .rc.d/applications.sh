@@ -12,8 +12,8 @@ if [ -d "$HOME/go" ]; then
   export PATH=$PATH:$GOPATH/bin
 fi
 
-# thefuck
-command -v thefuck 1>/dev/null && eval "$(thefuck --alias)"
-
 # rbenv
-command -v rbenv 1>/dev/null && eval "$(rbenv init -)"
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi

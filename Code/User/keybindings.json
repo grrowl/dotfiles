@@ -76,9 +76,20 @@
     "key": "cmd+, cmd+.",
     "command": "macros.autoFixAll"
   },
+  // activity bar
   {
-    "key": "cmd+, cmd+/",
-    "command": "editor.action.fixAll"
+    "key": "cmd+k cmd+b",
+    "command": "workbench.action.toggleActivityBarVisibility",
+  },
+  {
+    "key": "ctrl+]",
+    "command": "workbench.action.nextSideBarView",
+    // "when": "sideBarFocus"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "workbench.action.previousSideBarView",
+    // "when": "sideBarFocus"
   },
   // Focus editors and groups by cmd+number keys
   {
