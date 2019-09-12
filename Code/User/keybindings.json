@@ -13,11 +13,6 @@
     "command": "workbench.action.evenEditorWidths"
   },
   {
-    "key": "cmd+k cmd+z",
-    "command": "workbench.action.toggleMaximizedPanel",
-    "when": "terminalFocus"
-  },
-  {
     "key": "alt+cmd+/",
     "command": "-liveshare.followToTheSide",
     "when": "liveshare:hasCollaborators"
