@@ -5,6 +5,9 @@ alias lr='ls -tRFh'   # sorted by date,recursive,show type,human readable
 alias lt='ls -ltFh'   # long list,sorted by date,show type,human readable
 alias ll='ls -l'      # long list
 
+# export local .env file
+alias export-env="export \$(grep -v '^#' .env | xargs -0)"
+
 # http
 alias http-server='python -m SimpleHTTPServer'
 
