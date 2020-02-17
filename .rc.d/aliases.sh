@@ -17,5 +17,8 @@ if [[ "$(uname -s)" = 'Darwin' ]]; then
   alias chrome-tabs="$HOME/dotfiles/bin/chrome-tabs"
 fi
 
+# other bin
+alias awsp="$HOME/dotfiles/bin/aws-profile"
+
 # display docker statuses
 alias dockerps="docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'"
