@@ -1,9 +1,12 @@
+#!/bin/bash
+
 # nvm
 if [ -d "${HOME}/.nvm" ]; then
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-  [ -s "$(brew --prefix nvm)/nvm.sh" ] && source $(brew --prefix nvm)/nvm.sh
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#   see .rc.d/lazy-npm.sh
+#   export NVM_DIR="$HOME/.nvm"
+#   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # linux
+#   [ -s "$(brew --prefix nvm)/nvm.sh" ] && source $(brew --prefix nvm)/nvm.sh # osx
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # nvm bash_completion
 fi
 
 # export golang bin path
@@ -19,6 +22,6 @@ if [ -d "$HOME/.rbenv" ]; then
 fi
 
 # node-prototype-repl (node >13)
-if [ ! -z $(which node-prototype-repl) ]; then
+if [[ -n "$(command -v node-prototype-repl)" ]]; then
   export NODE_REPL_EXTERNAL_MODULE=$(which node-prototype-repl)
 fi

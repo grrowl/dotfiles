@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # ls
 alias l='ls -lFh'     # size,show type,human readable
 alias la='ls -lAFh'   # long list,show almost all,show type,human readable
