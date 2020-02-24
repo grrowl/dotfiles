@@ -1,6 +1,10 @@
 {
+    // basics
     "window.zoomLevel": 0,
-    "editor.fontFamily": "Inconsolata-g, Menlo, Monaco, 'Courier New', monospace",
+    "window.title": "${rootName}${separator}${activeEditorMedium} ${dirty}",
+    "workbench.startupEditor": "none",
+    "editor.fontFamily": "'JetBrains Mono', Inconsolata-g, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
     "editor.fontSize": 12,
     "editor.tabSize": 2,
     "editor.renderWhitespace": "boundary",
@@ -8,58 +12,42 @@
         80,
         100
     ],
-    "files.autoSave": "off",
+    "terminal.external.osxExec": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+    "editor.renderIndentGuides": true,
+    "editor.find.seedSearchStringFromSelection": false,
+    "search.smartCase": true,
+    // "editor.smoothScrolling": true,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "debug.openExplorerOnEnd": true,
+    "files.trimTrailingWhitespace": true,
+    "files.defaultLanguage": "markdown",
+
+    // ui extras
     "editor.minimap.enabled": true,
     "editor.minimap.maxColumn": 40,
-    // unsupported, but works:
-    "editor.scrollbar.verticalScrollbarSize": 5,
-    "editor.renderIndentGuides": true,
-    "typescript.check.npmIsInstalled": false,
-    "javascript.validate.enable": true,
-    "git.countBadge": "tracked",
-    "window.newWindowDimensions": "inherit",
-    "workbench.editor.tabCloseButton": "off",
-    "files.trimTrailingWhitespace": true,
-    "window.titleBarStyle": "custom",
-    "git.confirmSync": false,
-    "workbench.sideBar.location": "right",
-    "files.insertFinalNewline": true,
-    "window.title": "${rootName}${separator}${activeEditorMedium} ${dirty}",
-    "editor.multiCursorModifier": "ctrlCmd",
-    "workbench.startupEditor": "none",
-    "workbench.activityBar.visible": true,
-    "files.associations": {
-        "*.js": "javascriptreact",
-        "*.svg": "xml"
-    },
-    "[ruby]": {
-        "editor.wordWrap": "on"
-    },
+    "editor.minimap.renderCharacters": false,
+    "editor.scrollbar.verticalScrollbarSize": 5, // unsupported, but works:
+    "workbench.activityBar.visible": true, // toggleable
     // "editor.glyphMargin": false,
-    "search.useIgnoreFiles": true,
     "explorer.confirmDelete": false,
-    "problems.decorations.enabled": true,
-    "explorer.decorations.colors": true,
     "editor.lineNumbers": "interval",
-    "gitlens.blame.format": "${sha|20?} ${ago|12-}",
-    "gitlens.codeLens.scopes": [
-        "document",
-        "containers",
-        "blocks"
+    "editor.suggestSelection": "first",
+    "terminal.integrated.copyOnSelection": true,
+    "workbench.statusBar.feedback.visible": false,
+    "search.enableSearchEditorPreview": true,
+    "keyboard.touchbar.ignored": [
+        "workbench.action.debug.start",
+        "workbench.action.debug.run"
     ],
-    "gitlens.codeLens.symbolScopes": [
-        "Function"
-    ],
-    "diffEditor.ignoreTrimWhitespace": true,
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.blame.highlight.locations": [
-        "line",
-        "overview"
-    ],
-    "vscodeWorkspaceSwitcher.paths": [
-        "~/Documents/chillidonut/**/",
-        "~/Documents/repos/**/"
-    ],
+    "workbench.editor.tabCloseButton": "off",
+    "window.titleBarStyle": "custom",
+    "workbench.sideBar.location": "right",
+    "editor.semanticHighlighting.enabled": true,
+
+    // theme
     "workbench.colorTheme": "Dark+ (contrast)", // Night Owl or Dark+ (contrast)
     "workbench.colorCustomizations": {
         "[Dark+ (contrast)]": {
@@ -74,45 +62,100 @@
             "editorWidget.border": "#666",
             "editor.lineHighlightBorder": "#151515",
             "titleBar.border": "#333333",
-            // "statusBar.background": "#334455",
+            "statusBar.background": "#334455",
             "editorIndentGuide.activeBackground": "#555555"
+        },
+        "[Night Owl Black]": {
+            // "editor.background": "#090909",
+            // "sideBar.background": "#131313",
+            // "editorGutter.background": "#000000",
+            // "activityBar.background": "#000000",
+            // "sideBarSectionHeader.background": "#000000",
+            "editorWhitespace.foreground": "#90909030"
+        },
+        "[Overnight Slumber Italics]": {
+            "editorWhitespace.foreground": "#90909030"
         }
     },
-    "bookmarks.navigateThroughAllFiles": true,
-    "debug.openExplorerOnEnd": true,
-    "scm.diffDecorationsGutterWidth": 2,
-    "workbench.statusBar.feedback.visible": false,
-    "gitTreeCompare.iconsMinimal": true,
-    "gitlens.codeLens.recentChange.command": "gitlens.diffWithPrevious",
-    "gitlens.heatmap.toggleMode": "window",
-    "gitlens.hovers.annotations.over": "annotation",
-    "gitlens.recentChanges.highlight.locations": [
-        "line",
-        "overview"
+
+    // editing
+    "files.insertFinalNewline": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "merge-conflict.autoNavigateNextConflict.enabled": true,
+    "diffEditor.renderSideBySide": true,
+    "editor.snippetSuggestions": "bottom",
+    "editor.wordBasedSuggestions": false,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showSuggestionsAsSnippets": true,
+
+    // navigation
+    "vscodeWorkspaceSwitcher.paths": [
+        "~/Documents/chillidonut/**/",
+        "~/Documents/repos/**/"
     ],
-    "gitlens.hovers.annotations.changes": false,
-    "gitlens.recentChanges.toggleMode": "window",
-    "gitlens.statusBar.alignment": "left",
-    "gitlens.statusBar.format": "${ago}: \"${message}\"",
-    "editor.find.seedSearchStringFromSelection": false,
-    "gitlens.statusBar.reduceFlicker": true,
+    "bookmarks.navigateThroughAllFiles": true,
+
+    // git
+    "git.confirmSync": false,
+    "git.countBadge": "tracked",
     "git.enableSmartCommit": true,
     "git.defaultCloneDirectory": "/Users/tom/Documents/repos",
-    "terminal.external.osxExec": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
-    "editor.matchBrackets": false,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "scm.diffDecorationsGutterWidth": 2,
+    "git.detectSubmodules": false,
+
+    // js/ts
+    "typescript.check.npmIsInstalled": false,
+    "javascript.validate.enable": true,
+    "typescript.suggest.completeFunctionCalls": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+
+    // extensions
     "extensions.ignoreRecommendations": true,
-    "workbench.editor.showTabs": true,
-    "versionlens.showVersionLensesAtStartup": false,
-    "npm.enableScriptExplorer": true,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+
+    // other
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[postgres]": {
+        "editor.defaultFormatter": "adpyke.vscode-sql-formatter",
+    },
+    "bracket-pair-colorizer-2.highlightActiveScope": true,
+    "editor.matchBrackets": "near",
     "emojisense.languages": {
+        "git-commit": true,
         "markdown": true,
         "plaintext": {
-            "markupCompletionsEnabled": false,
-            "emojiDecoratorsEnabled": false
+            "emojiDecoratorsEnabled": false,
+            "markupCompletionsEnabled": false
         },
-        "git-commit": true,
-        "todo": true,
+        "todo": true
     },
+    "errorLens.addAnnotationTextPrefixes": false,
+    "errorLens.enabledDiagnosticLevels": [
+        "error"
+    ],
+    "errorLens.followCursor": "closestProblem",
+    "errorLens.followCursorMore": 3,
+    "errorLens.fontSize": "0.8em",
+    "gitTreeCompare.diffMode": "merge",
+    "gitTreeCompare.iconsMinimal": true,
+    "gitlens.blame.avatars": false,
+    "gitlens.blame.ignoreWhitespace": true,
+    "gitlens.codeLens.recentChange.command": "gitlens.diffWithPrevious",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.currentLine.format": "${agoOrDate} • ${id} • ${message}",
+    "gitlens.heatmap.toggleMode": "window",
+    "gitlens.hovers.annotations.changes": false,
+    "gitlens.hovers.annotations.over": "annotation",
+    "gitlens.hovers.currentLine.details": false,
+    "gitlens.hovers.currentLine.enabled": false,
     "gitlens.menus": {
         "editor": {
             "blame": true,
@@ -139,96 +182,71 @@
             "remote": false
         }
     },
-    "gitlens.currentLine.format": "${agoOrDate} • ${id} • ${message}",
-    "gitlens.blame.avatars": false,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.blame.ignoreWhitespace": true,
-    "extensions.showRecommendationsOnlyOnDemand": true,
+    "gitlens.recentChanges.highlight.locations": [
+        "line",
+        "overview"
+    ],
+    "gitlens.blame.format": "${sha|20?} ${ago|12-}",
+    "gitlens.codeLens.scopes": [
+        "document",
+        "containers",
+        "blocks"
+    ],
+    "gitlens.codeLens.symbolScopes": [
+        "Function"
+    ],
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.blame.highlight.locations": [
+        "line",
+        "overview"
+    ],
+    "gitlens.recentChanges.toggleMode": "window",
+    "gitlens.settings.mode": "advanced",
+    "gitlens.statusBar.alignment": "left",
+    "gitlens.statusBar.format": "${ago}: \"${message}\"",
+    "gitlens.statusBar.reduceFlicker": true,
+    "gitlens.views.compare.avatars": false,
+    "gitlens.views.compare.files.layout": "auto",
+    "gitlens.views.compare.location": "gitlens",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.fileHistory.location": "gitlens",
+    "gitlens.views.lineHistory.enabled": false,
+    "gitlens.views.lineHistory.location": "gitlens",
+    "gitlens.views.repositories.avatars": false,
+    "gitlens.views.repositories.branches.layout": "list",
+    "gitlens.views.repositories.location": "gitlens",
+    "gitlens.views.search.avatars": false,
+    "gitlens.views.search.files.layout": "auto",
+    "gitlens.views.search.location": "gitlens",
+    "npm.enableScriptExplorer": true,
     "prettier.requireConfig": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "search.smartCase": true,
-    "search.location": "panel",
-    "breadcrumbs.enabled": true,
-    "explorer.confirmDragAndDrop": false,
-    "macros": {
-        "autoFixAll": [
-            "eslint.executeAutofix",
-            "editor.action.fixAll",
-
+    "spellright.groupDictionaries": false,
+    "spellright.languageContext": {
+        "comments": [
+            "en-GB"
+        ],
+        "strings": [
+            "en-US"
         ]
     },
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "workbench.statusBar.visible": true,
-    "git.detectSubmodules": false,
-    "workbench.editor.highlightModifiedTabs": true,
-    "gitlens.views.repositories.branches.layout": "list",
-    "gitlens.views.fileHistory.enabled": false,
-    "gitlens.views.lineHistory.enabled": false,
-    "gitlens.views.compare.files.layout": "auto",
-    "gitlens.views.search.files.layout": "auto",
-    "diffEditor.renderSideBySide": true,
-    "yaml.schemas": {
-        "none": "pipeline.yaml"
-    },
-    "editor.smoothScrolling": true,
-    "typescript.suggest.completeFunctionCalls": true,
-    "javascript.suggest.completeFunctionCalls": true,
-    "terminal.integrated.copyOnSelection": true,
-    "gitlens.views.compare.avatars": false,
-    "gitlens.views.repositories.avatars": false,
-    "gitlens.views.search.avatars": false,
-    "editor.minimap.renderCharacters": false,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "bracket-pair-colorizer-2.highlightActiveScope": true,
-    "spellright.groupDictionaries": false,
     "spellright.notificationClassByParser": {
         "code": "information"
     },
-    "spellright.languageContext": {
-        "strings": [
-            "en-US"
-        ],
-        "comments": [
-            "en-GB"
-        ]
-    },
-    "gitTreeCompare.diffMode": "full",
-    "vscodeWorkspaceSwitcher.showInExplorer": true,
+    "versionlens.showVersionLensesAtStartup": false,
     "vscodeWorkspaceSwitcher.showInActivityBar": false,
-    "terminal.explorerKind": "external",
-    "gitlens.views.repositories.location": "gitlens",
-    "gitlens.views.fileHistory.location": "gitlens",
-    "gitlens.views.lineHistory.location": "gitlens",
-    "gitlens.views.compare.location": "gitlens",
-    "gitlens.views.search.location": "gitlens",
-    "[typescript]": {
+    "vscodeWorkspaceSwitcher.showInExplorer": true,
+    "insertDateString.format": "YYYY-MM-DDThh:mm:ssZZZ",
+    "glitch.token": "2f77a573-175f-4b72-9279-9d8f62588e7b",
+    "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[jsonc]": {
+    "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "emmet.triggerExpansionOnTab": true,
-    "merge-conflict.autoNavigateNextConflict.enabled": true,
-    "editor.gotoLocation.multiple": "goto",
-    "nasc-touchbar.togglePanel": false,
-    "nasc-touchbar.addCursorBelow": false,
-    "diffEditor.originalEditable": true,
-    "emmet.showSuggestionsAsSnippets": true,
-    "editor.snippetSuggestions": "bottom",
-    "editor.wordBasedSuggestions": false,
-    "gitlens.hovers.currentLine.details": false,
-    "gitlens.hovers.currentLine.enabled": false,
-    "errorLens.addAnnotationTextPrefixes": false,
-    "errorLens.errorBackground": "rgba(100,0,0,0.3)",
-    "errorLens.errorForeground": "rgba(220,90,90,0.6)",
-    // "errorLens.exclude": [
-    //     {
-    //         // Module has no exported member
-    //         "code": "2305",
-    //         "source": "ts"
-    //     },
-    // ],
-    "errorLens.followCursor": "closestProblem",
-    "errorLens.followCursorMore": 2
+    "merge-conflict.diffViewPosition": "Below",
+    "gitlab.showIssueLinkOnStatusBar": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.find.autoFindInSelection": "multiline",
+    "vscode-postgres.defaultDatabase": "mryum_dev",
+    "editor.gotoLocation.multipleDefinitions": "gotoAndPeek"
 }

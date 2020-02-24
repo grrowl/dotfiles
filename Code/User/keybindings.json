@@ -52,24 +52,26 @@
     "key": "cmd+h",
     "command": "workbench.files.action.collapseExplorerFolders"
   },
-  {
-    // show error under cursor
-    "key": "cmd+;",
-    "command": "editor.action.showHover",
-    "when": "editorTextFocus"
-  },
-  {
-    // prevent fat-fingering the settings hotkey
-    "key": "cmd+, cmd+,",
-    "command": "workbench.action.openSettings"
-  },
+  // prevent fat-fingering the settings hotkey
   {
     "key": "cmd+,",
     "command": "-workbench.action.openSettings"
   },
   {
+    // double press to open settings
+    "key": "cmd+, cmd+,",
+    "command": "workbench.action.openSettings"
+  },
+  {
+    "key": "cmd+, cmd+;",
+    "command": "editor.action.fixAll",
+    "when": "editorTextFocus"
+  },
+  {
+    // show error under cursor
     "key": "cmd+, cmd+.",
-    "command": "macros.autoFixAll"
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
   },
   // activity bar
   {
@@ -85,6 +87,11 @@
     "key": "ctrl+[",
     "command": "workbench.action.previousSideBarView",
     // "when": "sideBarFocus"
+  },
+  {
+    "key": "cmd+, cmd+/",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
   },
   // Focus editors and groups by cmd+number keys
   {
@@ -134,5 +141,74 @@
   {
     "key": "cmd+shift+3",
     "command": "workbench.action.focusThirdEditorGroup"
+  },
+  // move tabs around
+  {
+    "key": "cmd+k shift+cmd+right",
+    "command": "-workbench.action.moveEditorRightInGroup"
+  },
+  {
+    "key": "cmd+k shift+cmd+right",
+    "command": "workbench.action.moveEditorToRightGroup"
+  },
+  {
+    "key": "cmd+k shift+cmd+left",
+    "command": "-workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "cmd+k shift+cmd+left",
+    "command": "workbench.action.moveEditorToLeftGroup"
+  },
+  // terminal commands
+   {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+cmd+down",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+cmd+up",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  // navigate between changes
+  {
+    "key": "alt+cmd+pagedown",
+    "command": "editor.action.dirtydiff.next",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+pageup",
+    "command": "editor.action.dirtydiff.previous",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k cmd+k",
+    "command": "workbench.action.openGlobalKeybindings"
+  },
+  {
+    "key": "cmd+k cmd+s",
+    "command": "-workbench.action.openGlobalKeybindings"
+  },
+  {
+    "key": "cmd+k cmd+s",
+    "command": "-workbench.action.openGlobalKeybindings"
+  },
+  {
+    "key": "cmd+k cmd+k",
+    "command": "workbench.action.openGlobalKeybindings"
   }
 ]

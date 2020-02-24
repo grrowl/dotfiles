@@ -55,9 +55,9 @@ prompt_sfz_colors () {
   esac
 }
 
-prompt_sfz_git_dirty() {
-  # too expensive
-}
+# prompt_sfz_git_dirty() {
+#   # too expensive
+# }
 
 # bind to zsh-history-substring-search
 bindkey '^[[A' history-substring-search-up

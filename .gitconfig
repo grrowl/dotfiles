@@ -46,7 +46,7 @@
     publish = ! git push -u origin `git rev-parse --abbrev-ref HEAD`
     diverged = ! git log --graph --date=relative --oneline `git rev-parse --abbrev-ref HEAD` origin/`git rev-parse --abbrev-ref HEAD`
     fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
-    last = rev-list -1 HEAD 
+    last = rev-list -1 HEAD
 [core]
 	editor = vim
 	excludesfile = /Users/tom/.gitignore_global
@@ -55,7 +55,7 @@
 
 [merge]
 	tool = code
-	conflictstyle = diff3
+#       conflictstyle = diff3
 
 [push]
 	default = upstream
@@ -64,3 +64,5 @@
 [merge "npm-merge-driver"]
 	name = automatically merge npm lockfiles
 	driver = npx npm-merge-driver merge %A %O %B %P
+# [pull]
+#	rebase = preserve

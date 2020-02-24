@@ -17,3 +17,8 @@ if [ -d "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
+
+# node-prototype-repl (node >13)
+if [ ! -z $(which node-prototype-repl) ]; then
+  export NODE_REPL_EXTERNAL_MODULE=$(which node-prototype-repl)
+fi
