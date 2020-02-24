@@ -22,3 +22,8 @@ alias awsp="$HOME/dotfiles/bin/aws-profile"
 
 # display docker statuses
 alias dockerps="docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'"
+
+# set terminal title
+function title {
+  echo -ne "\033]0;"$*"\007"
+}
