@@ -1,3 +1,6 @@
+# benchmark startup:
+# zmodload zsh/zprof
+
 # load all files from .shell/zshrc.d directory
 if [ -d $HOME/.zshrc.d ]; then
   for file in $HOME/.zshrc.d/*.zsh; do
@@ -23,3 +26,5 @@ if [ -f '/Users/tom/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tom/google-
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tom/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tom/google-cloud-sdk/completion.zsh.inc'; fi
+
+# zprof
