@@ -6,9 +6,16 @@ function lazy_nvm {
   unset -f node
   unset -f npx
 
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # linux
-  [ -s "$(brew --prefix nvm)/nvm.sh" ] && source $(brew --prefix nvm)/nvm.sh # osx
+  if [ -d "${HOME}/.nvm" ]; then
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # linux
+    [ -s "$(brew --prefix nvm)/nvm.sh" ] && source $(brew --prefix nvm)/nvm.sh # osx
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # nvm bash_completion
+  fi
+  # node-prototype-repl (node >13)
+  if [[ -n "$(command -v node-prototype-repl)" ]]; then
+    export NODE_REPL_EXTERNAL_MODULE=$(which node-prototype-repl)
+  fi
 }
 
 # aliases
