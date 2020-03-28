@@ -18,6 +18,7 @@ if ! zgen saved; then
     zsh-users/zsh-autosuggestions
     lukechilds/zsh-better-npm-completion
     zsh-users/zsh-syntax-highlighting
+    zdharma/history-search-multi-word
     zsh-users/zsh-history-substring-search
 
 EOPLUGINS
