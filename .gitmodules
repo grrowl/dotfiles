@@ -1,0 +1,9 @@
+[submodule ".vim/pack/grrowl/start/vim-gitgutter"]
+	path = .vim/pack/grrowl/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule ".vim/pack/grrowl/start/vim-todo"]
+	path = .vim/pack/grrowl/start/vim-todo
+	url = https://github.com/peterlundgren/vim-todo.git
+[submodule ".vim/pack/grrowl/start/editorconfig-vim"]
+	path = .vim/pack/grrowl/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
