@@ -25,3 +25,7 @@ set backspace=indent,eol,start	" Backspace behaviour
 set autoread
 
 colorscheme desert
+
+syntax on
+filetype plugin on
+filetype plugin indent on

@@ -7,3 +7,6 @@
 [submodule ".vim/pack/grrowl/start/editorconfig-vim"]
 	path = .vim/pack/grrowl/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule ".vim/pack/grrowl/start/vim-polyglot"]
+	path = .vim/pack/grrowl/start/vim-polyglot
+	url = git@github.com:sheerun/vim-polyglot.git
