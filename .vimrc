@@ -31,3 +31,5 @@ filetype plugin indent on
 
 colorscheme industry
 highlight clear SignColumn
+highlight Normal ctermbg=NONE guibg=NONE
+highlight NonText ctermbg=NONE guibg=NONE
