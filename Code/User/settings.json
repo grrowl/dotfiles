@@ -1,7 +1,7 @@
 {
     // basics
     "window.zoomLevel": 0,
-    "window.title": "${rootName}${separator}${activeEditorMedium} ${dirty}",
+    "window.title": "${dirty} ${folderName} / ${activeEditorMedium}",
     "workbench.startupEditor": "none",
     "editor.fontFamily": "'JetBrains Mono', Inconsolata-g, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
@@ -35,7 +35,7 @@
     "explorer.confirmDelete": false,
     "editor.lineNumbers": "interval",
     "editor.suggestSelection": "first",
-    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
     "workbench.statusBar.feedback.visible": false,
     "search.enableSearchEditorPreview": true,
     "keyboard.touchbar.ignored": [
@@ -82,7 +82,6 @@
     "files.insertFinalNewline": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "merge-conflict.autoNavigateNextConflict.enabled": true,
-    "diffEditor.renderSideBySide": true,
     "editor.snippetSuggestions": "bottom",
     "editor.wordBasedSuggestions": false,
     "emmet.triggerExpansionOnTab": true,

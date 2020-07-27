@@ -5,6 +5,11 @@
     "command": "workbench.action.toggleMaximizedPanel"
   },
   {
+    "key": "cmd+j",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
     "key": "cmd+k cmd+z",
     "command": "workbench.action.maximizeEditor"
   },
@@ -197,7 +202,8 @@
   },
   {
     "key": "cmd+k cmd+k",
-    "command": "workbench.action.openGlobalKeybindings"
+    "command": "workbench.action.openGlobalKeybindings",
+    "when": "!terminalFocus"
   },
   {
     "key": "cmd+k cmd+s",
@@ -206,9 +212,15 @@
   {
     "key": "cmd+k cmd+s",
     "command": "-workbench.action.openGlobalKeybindings"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-workbench.action.terminal.clear",
+    "when": "terminalFocus"
   },
   {
     "key": "cmd+k cmd+k",
-    "command": "workbench.action.openGlobalKeybindings"
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
   }
 ]
