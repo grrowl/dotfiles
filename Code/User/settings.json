@@ -28,7 +28,6 @@
     // ui extras
     "editor.minimap.enabled": true,
     "editor.minimap.maxColumn": 40,
-    "editor.minimap.renderCharacters": false,
     "editor.scrollbar.verticalScrollbarSize": 5, // unsupported, but works:
     "workbench.activityBar.visible": true, // toggleable
     // "editor.glyphMargin": false,
@@ -247,5 +246,16 @@
     "editor.acceptSuggestionOnEnter": "off",
     "editor.find.autoFindInSelection": "multiline",
     "vscode-postgres.defaultDatabase": "mryum_dev",
-    "editor.gotoLocation.multipleDefinitions": "gotoAndPeek"
+    "editor.gotoLocation.multipleDefinitions": "gotoAndPeek",
+    "breadcrumbs.enabled": false,
+    "workbench.editor.showTabs": true,
+    "tabnine.experimentalAutoImports": true,
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.minimap.scale": 2,
+    "search.collapseResults": "auto",
+    "workbench.editor.pinnedTabSizing": "shrink",
+    "debug.javascript.autoAttachFilter": "onlyWithFlag",
+    "terminal.integrated.cursorStyle": "line"
 }

@@ -10,6 +10,14 @@ alias ll='ls -l'      # long list
 # export local .env file
 alias export-env="export \$(grep -v '^#' .env | xargs -0)"
 
+# docker
+alias d='docker'
+alias dc='docker-compose'
+
+# k8s
+alias k='kubectl'
+alias kx='kubectx'
+
 # http
 alias http-server='python -m SimpleHTTPServer'
 

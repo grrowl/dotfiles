@@ -66,3 +66,5 @@
 	driver = npx npm-merge-driver merge %A %O %B %P
 # [pull]
 #	rebase = preserve
+[pull]
+	ff = only
