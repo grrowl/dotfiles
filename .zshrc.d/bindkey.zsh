@@ -22,3 +22,8 @@ bindkey '^[[4~' end-of-line # tmux
 
 # ESC + /
 bindkey -M main -r '^[/'
+
+# ESC + v
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line

@@ -29,6 +29,8 @@ syntax on
 filetype plugin on
 filetype plugin indent on
 
+setlocal formatoptions-=tc
+
 colorscheme industry
 highlight clear SignColumn
 highlight Normal ctermbg=NONE guibg=NONE
