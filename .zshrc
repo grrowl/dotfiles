@@ -18,7 +18,7 @@ fi
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='code'
+  export EDITOR='code --wait'
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
