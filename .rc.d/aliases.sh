@@ -15,7 +15,7 @@ alias export-env="export \$(grep -v '^#' .env | xargs -0)"
 
 # docker
 alias d='docker'
-alias dc='docker-compose'
+alias dc='docker compose'
 
 # k8s
 alias k='kubectl'
@@ -43,3 +43,9 @@ alias dockerps="docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'"
 function title {
   echo -ne "\033]0;"$*"\007"
 }
+
+alias branchpr="git checkout -b fix/grrowl-\$(date +%s) && gh pr create -w"
+
+# generate password
+alias pwgen="openssl rand -base64"
+
