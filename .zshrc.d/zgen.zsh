@@ -20,6 +20,7 @@ if ! zgen saved; then
     zsh-users/zsh-syntax-highlighting
     zdharma/history-search-multi-word
     zsh-users/zsh-history-substring-search
+    buonomo/yarn-completion
 
 EOPLUGINS
   # ^ can't indent this EOPLUGINS
@@ -71,6 +72,7 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="60"
 # customise zsh-history-substring-search
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="underline"
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="none"
+HISTORY_SUBSTRING_SEARCH_FUZZY="yes"
 
 # customise zsh-syntax-highlighting
 ZSH_HIGHLIGHT_STYLES[unknown-token]='none'

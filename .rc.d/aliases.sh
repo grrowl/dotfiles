@@ -48,4 +48,3 @@ alias branchpr="git checkout -b fix/grrowl-\$(date +%s) && gh pr create -w"
 
 # generate password
 alias pwgen="openssl rand -base64"
-
