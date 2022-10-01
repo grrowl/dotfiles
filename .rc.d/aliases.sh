@@ -48,3 +48,5 @@ alias branchpr="git checkout -b fix/grrowl-\$(date +%s) && gh pr create -w"
 
 # generate password
 alias pwgen="openssl rand -base64"
+
+alias rssi="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | egrep -E 'agrCtlRSSI|agrCtlNoise|lastTxRate'"
