@@ -31,7 +31,8 @@ filetype plugin indent on
 
 setlocal formatoptions-=tc
 
-colorscheme industry
+colorscheme murphy
+
 highlight clear SignColumn
-highlight Normal ctermbg=NONE guibg=NONE
-highlight NonText ctermbg=NONE guibg=NONE
+" highlight Normal ctermbg=NONE guibg=NONE
+" highlight NonText ctermbg=NONE guibg=NONE

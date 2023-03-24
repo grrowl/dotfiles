@@ -10,6 +10,9 @@ alias lth='lt | head -16' # latest 15
 
 alias dfh='df -h' # df
 
+# du
+alias duh="du -sh * | sort -h"
+
 # export local .env file
 alias export-env="export \$(grep -v '^#' .env | xargs -0)"
 
@@ -50,3 +53,15 @@ alias branchpr="git checkout -b fix/grrowl-\$(date +%s) && gh pr create -w"
 alias pwgen="openssl rand -base64"
 
 alias rssi="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | egrep -E 'agrCtlRSSI|agrCtlNoise|lastTxRate'"
+
+# dtach
+dtach-job() {
+  if [ -z $2 ]; then
+    dtach -a $1.dtach
+  else
+    dtach -n $1.dtach /bin/bash -c "${@:2} >> $1.log 2>&1"
+  fi
+}
+
+# better watch
+alias watchx="watch -cd -n 2"
