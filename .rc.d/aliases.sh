@@ -25,7 +25,7 @@ alias k='kubectl'
 alias kx='kubectx'
 
 # http
-alias http-server='python -m SimpleHTTPServer'
+alias http-server='python3 -m http.server'
 
 # osx-only aliases
 if [[ "$(uname -s)" = 'Darwin' ]]; then
