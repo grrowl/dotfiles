@@ -31,8 +31,11 @@ filetype plugin indent on
 
 setlocal formatoptions-=tc
 
+set termguicolors
 colorscheme murphy
 
 highlight clear SignColumn
-" highlight Normal ctermbg=NONE guibg=NONE
-" highlight NonText ctermbg=NONE guibg=NONE
+
+highlight Normal ctermbg=black guibg=black
+highlight NonText ctermbg=NONE guibg=NONE
+highlight EndOfBuffer ctermbg=NONE guibg=NONE
