@@ -67,3 +67,15 @@ dtach-job() {
 
 # better watch
 alias watchx="watch -cd -n 2"
+
+# easy checkout
+checkout() {
+  if [ -z "$*" ]; then
+    echo "Needs arg"
+    return
+  fi
+
+  DIR=$(echo "$@" | grep -Eo '[^/]+/[^/]+\.git' | sed 's/\.git$//');
+  git clone "$@" "$HOME/repos/$DIR" || return
+  cd "$HOME/repos/$DIR" || return
+}
