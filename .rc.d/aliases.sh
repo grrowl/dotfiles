@@ -20,9 +20,11 @@ alias export-env="export \$(grep -v '^#' .env | xargs -0)"
 if [ -f '/usr/bin/podman' ]; then
   alias docker='podman'
   alias docker-compose='podman-compose'
+  alias dc='docker-compose'
+else
+  alias dc='docker compose'
 fi
 alias d='docker'
-alias dc='docker compose'
 
 # k8s
 alias k='kubectl'
