@@ -17,7 +17,7 @@ alias duh="du -sh * | sort -h"
 alias export-env="export \$(grep -v '^#' .env | xargs -0)"
 
 # docker / podman
-if [ -f '/usr/bin/podman' ]; then
+if [ -f '/usr/bin/podman' ] || [ -f '/opt/homebrew/bin/podman' ]; then
   alias docker='podman'
   alias docker-compose='podman-compose'
   alias dc='docker-compose'
