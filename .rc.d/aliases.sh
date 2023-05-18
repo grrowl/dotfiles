@@ -79,7 +79,7 @@ checkout() {
     return
   fi
 
-  DIR=$(echo "$@" | grep -Eo '[^/]+/[^/]+\.git' | sed 's/\.git$//');
+  DIR=$(echo "$@" | grep -Eo '[^/:]+/[^/]+\.git' | sed 's/\.git$//');
   git clone "$@" "$HOME/repos/$DIR" || return
   cd "$HOME/repos/$DIR" || return
 }
