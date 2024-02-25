@@ -83,3 +83,6 @@ checkout() {
   git clone "$@" "$HOME/repos/$DIR" || return
   cd "$HOME/repos/$DIR" || return
 }
+
+alias pbjson="pbpaste | jq -r"
+alias pbjsons="pbpaste | jq -sRr '@json'"

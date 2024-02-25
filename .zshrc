@@ -27,5 +27,14 @@ if [ -f '/Users/tom/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tom/google-
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tom/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tom/google-cloud-sdk/completion.zsh.inc'; fi
 
-
 if [ -f '/opt/homebrew/bin/brew' ]; then eval "$(/opt/homebrew/bin/brew shellenv)"; fi
+
+# bun completions
+[ -s "/Users/tom/.bun/_bun" ] && source "/Users/tom/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# zoxide
+if command -v zoxide >/dev/null 2>&1; then eval "$(zoxide init zsh)"; fi
