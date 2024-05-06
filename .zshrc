@@ -1,6 +1,9 @@
 # benchmark startup:
 # zmodload zsh/zprof
 
+# ensure /usr/local/bin is in path
+export PATH=/usr/local/bin:~/.local/bin:$PATH
+
 # load all files from .shell/zshrc.d directory
 if [ -d $HOME/.zshrc.d ]; then
   for file in $HOME/.zshrc.d/*.zsh; do
