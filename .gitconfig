@@ -27,25 +27,16 @@
 [help]
     autocorrect = 10
 
-
-[merge]
-    tool = vscode
-[mergetool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
-
-[diff]
-    tool = vscode
-[difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
-
 [alias]
     p = push
     pp = publish
+    s = switch
+    sc = switch create
     rb = pull --rebase
     rbc = rebase --continue
     rba = rebase --abort
-    fancy-log = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
-    branches = for-each-ref --count=10 --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:relative) %09%(color:white)%(objectname:short) %(color:yellow)%(refname:short) %09%(color:white)%(upstream:track) %(contents:subject)' refs/heads --no-merged
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+    b = for-each-ref --count=10 --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:relative) %09%(color:white)%(objectname:short) %(color:yellow)%(refname:short) %09%(color:white)%(upstream:track) %(contents:subject)' refs/heads --no-merged
     edit-conflicted = ! git diff --name-only | uniq | xargs $(echo $EDITOR)
     history = log -p --
 	pushf = push --force-with-lease
@@ -59,10 +50,6 @@
 	whitespace = tab-in-indent,trailing-space,space-before-tab
 	ignorecase = false
 	editor = vim -c 'startinsert'
-
-[merge]
-	tool = code
-#       conflictstyle = diff3
 
 [push]
 	default = upstream
@@ -82,3 +69,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[include]
+    path = ~/dotfiles/.gitconfig_difftastic
+    condition = command -v difft >/dev/null 2>&1

@@ -75,4 +75,5 @@ alias gsts='git stash show --text'
 alias gsu='git submodule update'
 
 alias gp='git push'
+alias gpf='git push --force-with-lease'
 alias gpl='git pull'
