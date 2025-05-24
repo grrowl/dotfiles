@@ -84,8 +84,7 @@ checkout() {
   cd "$HOME/repos/$DIR" || return
 }
 
-# alias ac="aider --commit --model openrouter/meta-llama/llama-4-maverick:free"
-alias ac="git diff | llm -m openrouter/meta-llama/llama-4-maverick:free -s 'Write a concise, imperative-mood git commit message summarizing these changes.' | git commit -F -"
+alias ac="git diff --staged | llm -m openrouter/meta-llama/llama-4-maverick:free -s 'Write a concise, imperative-mood git commit message summarizing these changes. Begin with feat, fix, bug, or chore. No preamble or yapping.' | git commit -F -"
 
 alias pbjson="pbpaste | jq -r"
 alias pbjsons="pbpaste | jq -sRr '@json'"
