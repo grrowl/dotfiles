@@ -49,7 +49,7 @@
 	excludesfile = /Users/tom/.gitignore_global
 	whitespace = tab-in-indent,trailing-space,space-before-tab
 	ignorecase = false
-	editor = vim -c 'startinsert'
+# editor = vim -c 'startinsert'
 
 [push]
 	default = upstream

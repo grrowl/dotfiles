@@ -25,3 +25,5 @@ PS1="\[\e[1;32m\]\h:\W \u$\[\e[0m\] "
 # better back-searching
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
+
+. "$HOME/.cargo/env"

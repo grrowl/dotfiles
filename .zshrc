@@ -21,7 +21,7 @@ fi
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='zed'
+  export EDITOR='zed --wait'
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -41,3 +41,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # zoxide
 if command -v zoxide >/dev/null 2>&1; then eval "$(zoxide init zsh)"; fi
+
+. "$HOME/.cargo/env"
