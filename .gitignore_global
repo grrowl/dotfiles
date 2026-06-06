@@ -8,5 +8,10 @@ Icon
 ._*
 
 .todo
+.worktrees
 bak
 _docs
+
+tmp_code_*
+
+**/.claude/settings.local.json

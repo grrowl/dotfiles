@@ -53,6 +53,7 @@ alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdw='git diff --word-diff'
 
 alias gds='git diff --stat'
+alias gdsw='watch -n 0.5 -c -d git -c color.ui=always diff --stat'
 
 alias gf='git fetch'
 alias gfa='git fetch --all --prune'
@@ -76,3 +77,5 @@ alias gsu='git submodule update'
 alias gp='git push'
 alias gpf='git push --force-with-lease'
 alias gpl='git pull'
+
+alias gsom='git checkout origin/main'

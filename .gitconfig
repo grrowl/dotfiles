@@ -1,56 +1,49 @@
 [user]
-    email = tom@chillidonut.com
-    name = Tom McKenzie
-    signingkey = 896D4BE5
-
+	email = tom@chillidonut.com
+	name = Tom McKenzie
+	signingkey = 896D4BE5
 [color]
-    branch = auto
-    diff = auto
-    status = auto
-
+	branch = auto
+	diff = auto
+	status = auto
 [color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-
+	current = yellow reverse
+	local = yellow
+	remote = green
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red
-    new = cyan
-
+	meta = yellow bold
+	frag = magenta bold
+	old = red
+	new = cyan
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
-
+	added = yellow
+	changed = green
+	untracked = cyan
 [help]
-    autocorrect = 10
-
+	autocorrect = 10
 [alias]
-    p = push
-    pp = publish
-    s = switch
-    sc = switch create
-    rb = pull --rebase
-    rbc = rebase --continue
-    rba = rebase --abort
-    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
-    b = for-each-ref --count=10 --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:relative) %09%(color:white)%(objectname:short) %(color:yellow)%(refname:short) %09%(color:white)%(upstream:track) %(contents:subject)' refs/heads --no-merged
-    edit-conflicted = ! git diff --name-only | uniq | xargs $(echo $EDITOR)
-    history = log -p --
+	p = push
+	pp = publish
+	s = switch
+	sc = switch create
+	rb = pull --rebase
+	rbc = rebase --continue
+	rba = rebase --abort
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+	b = for-each-ref --count=10 --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:relative) %09%(color:white)%(objectname:short) %(color:yellow)%(refname:short) %09%(color:white)%(upstream:track) %(contents:subject)' refs/heads --no-merged
+	edit-conflicted = ! git diff --name-only | uniq | xargs $(echo $EDITOR)
+	history = log -p --
 	pushf = push --force-with-lease
-    pullall = ! git pull && git submodule update --init --recursive --remote
-    publish = ! git push -u origin `git rev-parse --abbrev-ref HEAD`
-    diverged = ! git log --graph --date=relative --oneline `git rev-parse --abbrev-ref HEAD` origin/`git rev-parse --abbrev-ref HEAD`
-    fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
-    last = rev-list -1 HEAD
+	pullall = ! git pull && git submodule update --init --recursive --remote
+	publish = ! git push -u origin `git rev-parse --abbrev-ref HEAD`
+	diverged = ! git log --graph --date=relative --oneline `git rev-parse --abbrev-ref HEAD` origin/`git rev-parse --abbrev-ref HEAD`
+	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
+	last = rev-list -1 HEAD
 [core]
-	excludesfile = /Users/tom/.gitignore_global
+	excludesfile = /Users/tom/dotfiles/.gitignore_global
 	whitespace = tab-in-indent,trailing-space,space-before-tab
 	ignorecase = false
-# editor = vim -c 'startinsert'
-
+	pager = delta
 [push]
 	default = upstream
 [status]
@@ -58,8 +51,6 @@
 [merge "npm-merge-driver"]
 	name = automatically merge npm lockfiles
 	driver = npx npm-merge-driver merge %A %O %B %P
-# [pull]
-#	rebase = preserve
 [pull]
 	ff = only
 [advice]
@@ -69,7 +60,26 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-
 [include]
-    path = ~/dotfiles/.gitconfig_difftastic
-    condition = command -v difft >/dev/null 2>&1
+	path = ~/dotfiles/.gitconfig_difftastic
+	condition = command -v difft >/dev/null 2>&1
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+    features = decorations
+	navigate = true
+	line-numbers = true
+	hyperlinks = true
+ [delta "decorations"]
+     ; commit-decoration-style = bold yellow box ul
+     ; file-style = bold yellow ul
+     file-decoration-style = bold
+     hunk-header-decoration-style = bold
+[merge]
+	conflictStyle = zdiff3
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

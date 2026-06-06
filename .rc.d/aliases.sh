@@ -16,8 +16,8 @@ alias duh="du -sh * | sort -h"
 # export local .env file
 alias export-env="export \$(grep -v '^#' .env | xargs -0)"
 
-# docker / podman
-if [ -f '/usr/bin/podman' ] || [ -f '/opt/homebrew/bin/podman' ]; then
+# docker / podman — only alias to podman if docker CLI isn't installed
+if ! command -v docker >/dev/null 2>&1 && command -v podman >/dev/null 2>&1; then
   alias docker='podman'
   alias docker-compose='podman-compose'
   alias dc='docker-compose'
@@ -84,7 +84,45 @@ checkout() {
   cd "$HOME/repos/$DIR" || return
 }
 
-alias ac="git diff --staged | llm -m openrouter/meta-llama/llama-4-maverick:free -s 'Write a concise, imperative-mood git commit message summarizing these changes. Begin with feat, fix, bug, docs, or chore. No preamble or yapping.' | git commit -F -"
+alias ac='git diff --staged | head -c $((128 * 1024 * 3)) | llm -m openrouter/openrouter/free '\''Write a concise, imperative-mood git commit message summarizing these changes. Begin with feat, fix, bug, docs, or chore. No preamble or yapping.'\'' | git commit -F -'
 
 alias pbjson="pbpaste | jq -r"
 alias pbjsons="pbpaste | jq -sRr '@json'"
+
+alias vscode-server="docker run -it --init -p 3000:3000 -v "$(pwd):/home/workspace:cached" gitpod/openvscode-server"
+
+alias cc='claude --dangerously-skip-permissions --system-prompt "."'
+alias ccw='claude --dangerously-skip-permissions --system-prompt "." --tmux -w'
+
+alias t-claude="tmux has-session -t claude-session || tmux new-session -d -s claude-session; tmux attach-session -t claude-session"
+alias t-code="tmux has-session -t code-session || tmux new-session -d -s code-session; tmux attach-session -t code-session"
+
+# tt — attach/create the tmux session for the CURRENT dir, matching Zed's naming
+# (parent_current via -A). Switches instead of nesting when already inside tmux.
+tt() {
+  local name
+  name="$(basename "$(dirname "$PWD")")_$(basename "$PWD")"
+  if [ -n "$TMUX" ]; then
+    tmux has-session -t "=$name" 2>/dev/null || tmux new-session -d -s "$name"
+    tmux switch-client -t "=$name"
+  else
+    tmux new-session -A -s "$name"
+  fi
+}
+
+# tmux picker: native choose-tree (real tree, '/' filter, live preview, -Z zoom).
+# -F colorizes the right-hand descriptive column — the session/window NAME on the
+# left is drawn plain by tmux and can't be styled. Three line types handled via
+# the pane_format / window_format conditional (else-branch = session line).
+ts() {
+  local h="$HOME" pane win sess fmt
+  pane="#[fg=magenta]#{pane_current_command}#[default] #[fg=blue]#{s|$h|~|:pane_current_path}#[default]"
+  win="#[fg=magenta]#{pane_current_command}#[default]  #[fg=blue]#{s|$h|~|:pane_current_path}#[default]#{?window_zoomed_flag, #[fg=yellow]Z#[default],}#{?window_active, #[fg=green]●#[default],}  #[fg=colour244]#{t/f/%b %d %H#:%M:window_activity}#[default]"
+  sess="#[fg=yellow]#{session_windows}w#[default]  #{?session_attached,#[fg=green]● attached#[default],#[fg=colour244]detached#[default]}  #[fg=colour244]#{t/f/%b %d %H#:%M:session_activity}#[default]"
+  fmt="#{?pane_format,$pane,#{?window_format,$win,$sess}}"
+  if [ -n "$TMUX" ]; then
+    tmux choose-tree -Zs -F "$fmt"
+  else
+    tmux attach \; choose-tree -Zs -F "$fmt" 2>/dev/null || echo "no tmux sessions"
+  fi
+}

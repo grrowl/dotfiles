@@ -27,3 +27,8 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 . "$HOME/.cargo/env"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/tom/.lmstudio/bin"
+# End of LM Studio CLI section
+
