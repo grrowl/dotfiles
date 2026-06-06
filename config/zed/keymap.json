@@ -1,0 +1,87 @@
+[
+  {
+    "bindings": {
+      "cmd-k cmd-,": "zed::OpenSettings",
+      "cmd-shift-r": "editor::Rename",
+      "cmd-shift-c": "workspace::CopyRelativePath",
+      "cmd-alt-shift-c": "editor::CopyPermalinkToLine",
+      "cmd-o": "file_finder::Toggle",
+      "cmd-shift-o": ["projects::OpenRecent", { "create_new_window": false }],
+      "cmd-t": "outline::Toggle",
+      "cmd-shift-t": "pane::ReopenClosedItem",
+      "cmd-p": "command_palette::Toggle",
+      "cmd-shift-p": "project_symbols::Toggle",
+      "alt-cmd-o": "workspace::Open",
+      "cmd-alt-n": ["task::Spawn", { "task_name": "agent terminal" }]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-k": "editor::DeleteLine",
+      // "cmd-shift-e": "pane::RevealInProjectPanel"
+      "alt-shift-i": "editor::SplitSelectionIntoLines",
+      "cmd-,": "editor::Hover",
+      "cmd-;": "editor::FindAllReferences",
+      "cmd-alt-ctrl-[": "editor::FoldSelectedRanges",
+      "cmd-k cmd-l": "vim::ConvertToLowerCase",
+      "cmd-k cmd-u": "editor::ConvertToUpperCase",
+      "cmd-k cmd-i": "editor::ConvertToUpperCamelCase",
+      "cmd-k cmd-o": "editor::ConvertToLowerCamelCase"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "cmd-h": "project_panel::CollapseAllEntries"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "alt-enter": "project_panel::Open"
+    }
+  },
+  {
+    // cmd-N selects tab N (mac-native). This shadows the default
+    // workspace::ActivatePane (jump to split N), so that moves to ctrl-N below
+    // — which was the now-redundant default tab binding (pane::ActivateItem).
+    "context": "Pane",
+    "bindings": {
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": ["pane::ActivateItem", 8],
+      "ctrl-1": ["workspace::ActivatePane", 0],
+      "ctrl-2": ["workspace::ActivatePane", 1],
+      "ctrl-3": ["workspace::ActivatePane", 2],
+      "ctrl-4": ["workspace::ActivatePane", 3],
+      "ctrl-5": ["workspace::ActivatePane", 4],
+      "ctrl-6": ["workspace::ActivatePane", 5],
+      "ctrl-7": ["workspace::ActivatePane", 6],
+      "ctrl-8": ["workspace::ActivatePane", 7],
+      "ctrl-9": ["workspace::ActivatePane", 8]
+    }
+  }
+  // inline suggestions
+  // {
+  //   "context": "Editor && inline_completion && !showing_completions",
+  //   "bindings": {
+  //     // "tab": "editor::Tab",
+  //     // "alt+tab": "editor::AcceptInlineCompletion"
+  //     "tab": "editor::AcceptInlineCompletion"
+  //   }
+  // },
+  // {
+  //   "context": "Editor && showing_completions",
+  //   "bindings": {
+  //     "enter": "editor::Newline",
+  //     "tab": "editor::ConfirmCompletion"
+  //   }
+  // }
+]

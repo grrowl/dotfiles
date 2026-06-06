@@ -1,0 +1,20 @@
+// Static tasks. Bound to keys in keymap.json.
+[
+  {
+    // Attach (or create) the project's tmux session — same parent_current naming
+    // as the `tt` shell alias. Opens as a CENTER tab, not the bottom dock.
+    // allow_concurrent_runs:false → one canonical, reusable tmux terminal.
+    "label": "agent terminal",
+    "command": "tmux new-session -A -s \"$(basename \"$(dirname \"$ZED_WORKTREE_ROOT\")\")_$(basename \"$ZED_WORKTREE_ROOT\")\" \"$SHELL -ic cc\"",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal_target": "center",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "on_success",
+    "shell": "system",
+    "env": {
+      "EDITOR": "zed --wait",
+    },
+  },
+]

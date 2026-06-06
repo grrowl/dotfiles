@@ -1,0 +1,205 @@
+//
+// Zed settings — keep this MINIMAL: only overrides vs Zed defaults.
+// Full key reference: command palette -> "zed: open default settings".
+// Docs: https://zed.dev/docs/configuring-zed
+//
+// Rebuilt 2026-05-31: AI/agent config, MCP context servers, and the
+// transparency theme_overrides were stripped for a clean baseline.
+// Backup of the old config: ~/zed-backup-20260531-151032.zip
+//
+{
+  // theme
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "mode": "acceptEdits",
+      },
+      "type": "registry",
+    },
+  },
+  "minimum_split_diff_width": 220.0,
+  "diff_view_style": "split",
+  "agent": {
+    "use_modifier_to_send": true,
+    "thinking_display": "preview",
+    "play_sound_when_agent_done": "when_hidden",
+    "sidebar_side": "right",
+    "button": true,
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "macOS Classic Dark"
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Monospace Icon Theme - Dark",
+    "dark": "Monospace Icon Theme - Dark"
+  },
+
+  // fonts
+  "ui_font_family": "Iosevka Aile",
+  "ui_font_size": 14,
+  "buffer_font_family": "Iosevka Slab Extended",
+  "buffer_font_size": 14,
+
+  // editor
+  "show_whitespaces": "selection",
+  "soft_wrap": "editor_width",
+  "always_treat_brackets_as_autoclosed": true,
+  "use_autoclose": true,
+  "confirm_quit": true,
+  "active_pane_modifiers": {
+    "inactive_opacity": 0.8,
+  },
+
+  // one focused window per project
+  "cli_default_open_behavior": "new_window",
+  "use_system_window_tabs": false,
+
+  // ui chrome
+  "title_bar": {
+    "show_menus": false,
+    "show_branch_status_icon": false,
+  },
+  "status_bar": {
+    "show_active_file": false,
+    "line_endings_button": false,
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
+  "bottom_dock_layout": "full",
+
+  // tabs
+  "preview_tabs": {
+    "enable_keep_preview_on_code_navigation": true,
+    "enable_preview_from_file_finder": true,
+  },
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": true,
+    "show_nav_history_buttons": true,
+  },
+  "tabs": {
+    "show_diagnostics": "errors",
+    "activate_on_close": "left_neighbour",
+    "file_icons": false,
+    "close_position": "left",
+    "git_status": true,
+  },
+
+  // search
+  "search": {
+    "button": true,
+    "regex": true,
+  },
+
+  // minimap
+  "minimap": {
+    "thumb_border": "none",
+    "show": "auto",
+    "thumb": "hover",
+    // "thumb_border": "left_open",
+    "current_line_highlight": "line",
+  },
+
+  // git
+  "git": {
+    "inline_blame": {
+      "min_column": 80,
+      "show_commit_summary": true,
+    },
+    "git_gutter": null,
+    "worktree_directory": ".worktrees",
+  },
+
+  // terminal
+  "terminal": {
+    "font_family": "Iosevka Term Slab",
+    "toolbar": {
+      "breadcrumbs": true,
+    },
+    "env": {
+      "EDITOR": "zed --wait",
+    },
+  },
+
+  // panels
+  "project_panel": {
+    "entry_spacing": "comfortable",
+    "button": true,
+    "indent_size": 7,
+    "auto_reveal_entries": true,
+    "auto_fold_dirs": true,
+  },
+  "outline_panel": {
+    "dock": "left",
+    "indent_size": 7,
+  },
+
+  // type hints / lsp
+  "inlay_hints": {
+    "enabled": false,
+    "show_type_hints": false,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+  },
+  "lsp": {
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "includeInlayParameterNameHints": "all",
+          "includeInlayFunctionParameterTypeHints": true,
+          "includeInlayVariableTypeHints": true,
+          "includeInlayPropertyDeclarationTypeHints": true,
+          "includeInlayFunctionLikeReturnTypeHints": true,
+        },
+      },
+    },
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+        },
+        "python": {
+          "pythonPath": ".venv/bin/python",
+        },
+      },
+    },
+    "typos": {
+      "initialization_options": {
+        "diagnosticSeverity": "Hint",
+      },
+    },
+  },
+
+  // languages / formatting
+  "languages": {
+    "JSON": {
+      "prettier": { "allowed": true, "parser": "json" },
+    },
+    "JavaScript": {
+      "format_on_save": "on",
+      "code_actions_on_format": { "source.organizeImports": true },
+    },
+    "TypeScript": {
+      "format_on_save": "on",
+      "code_actions_on_format": { "source.organizeImports": true },
+    },
+    "TSX": {
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll": true,
+      },
+    },
+    "Python": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": { "command": "black", "arguments": ["-"] },
+      },
+    },
+  },
+}

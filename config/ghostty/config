@@ -1,0 +1,33 @@
+theme = Dark Pastel
+
+background-blur-radius = 20
+background-opacity = 0.85
+
+# font-family = JetBrainsMono
+font-family = Menlo
+font-size = 13
+font-thicken
+cursor-style = block
+cursor-style-blink = true
+
+scrollback-limit = 4294967295
+
+shell-integration = zsh
+shell-integration-features = no-cursor
+copy-on-select = clipboard
+
+window-save-state = always
+
+macos-titlebar-style = tabs
+macos-option-as-alt = true
+macos-icon = custom-style
+# macos-icon-frame = chrome
+macos-icon-ghost-color = #9580FF
+# macos-icon-screen-color = #1E1E2E, #302D41
+
+keybind = global:alt+`=toggle_quick_terminal
+quick-terminal-position = bottom
+quick-terminal-autohide = false
+quick-terminal-animation-duration = 0.1
+# copy-on-select = false
+keybind = shift+enter=text:\x1b\r

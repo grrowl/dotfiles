@@ -4,3 +4,17 @@
 .rc.d/local.sh
 .zshrc.d/local.zsh
 bak
+
+# Application settings: ignore the whole tree by default, then opt-in ONLY the
+# files we've vetted as public-safe. Anything new under config/ stays private
+# until explicitly un-ignored here (guards against leaking app secrets).
+config/**
+!config/ghostty/
+!config/ghostty/config
+!config/zed/
+!config/zed/settings.json
+!config/zed/keymap.json
+!config/zed/tasks.json
+!config/rectangle/
+!config/rectangle/com.knollsoft.Rectangle.plist
+!config/rectangle/import.sh

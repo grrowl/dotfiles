@@ -10,7 +10,32 @@ mkdir -p $olddir
 
 ## move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
-    mv -f "$HOME/$file" $olddir
+    [ -e "$HOME/$file" ] && mv -f "$HOME/$file" $olddir
     echo "Creating symlink to $file in ~"
-    ln -s "$dir/$file" "$HOME/$file"
+    ln -sfn "$dir/$file" "$HOME/$file"
 done
+
+# ── App settings ─────────────────────────────────────────────────────────────
+# Symlink vetted, public-safe app configs from config/ into their real homes.
+# (See .gitignore — config/ is ignored by default, these files are opted in.)
+link_config() {   # link_config <repo-path> <abs-dest>
+    local src="$dir/$1" dest="$2"
+    [ -e "$src" ] || return 0
+    mkdir -p "$(dirname "$dest")"
+    if [ -e "$dest" ] && [ ! -L "$dest" ]; then
+        mkdir -p "$olddir/$(dirname "$1")"
+        mv -f "$dest" "$olddir/$1"
+    fi
+    ln -sfn "$src" "$dest"
+    echo "Linked $1 -> $dest"
+}
+
+link_config config/ghostty/config    "$HOME/.config/ghostty/config"
+link_config config/zed/settings.json "$HOME/.config/zed/settings.json"
+link_config config/zed/keymap.json   "$HOME/.config/zed/keymap.json"
+link_config config/zed/tasks.json    "$HOME/.config/zed/tasks.json"
+
+# Rectangle: prefs domain can't be symlinked — import the cleaned export instead.
+if command -v defaults >/dev/null 2>&1 && [ -f "$dir/config/rectangle/import.sh" ]; then
+    bash "$dir/config/rectangle/import.sh" || true
+fi
