@@ -14,5 +14,8 @@ if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
+# dotfiles bin/ helpers (aws-profile, uv-upgrade, git-difft, ...)
+[ -d "$HOME/dotfiles/bin" ] && export PATH="$PATH:$HOME/dotfiles/bin"
+
 # shhh
 export HOMEBREW_NO_ENV_HINTS=1

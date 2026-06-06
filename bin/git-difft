@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# git diff.external wrapper: render diffs with difftastic when it's installed,
+# else fall back to a plain unified diff so `git diff` never hard-fails on a
+# machine without difft.
+#
+# git calls an external differ with 7 args:
+#   path  old-file  old-hex  old-mode  new-file  new-hex  new-mode
+if command -v difft >/dev/null 2>&1; then
+  exec difft "$@"
+fi
+# Fallback: plain unified diff. `diff` exits 1 when files differ, but git treats a
+# non-zero exit from an external differ as failure ("external diff died"), so we
+# swallow it and always exit 0.
+diff -u -L "a/$1" -L "b/$1" -- "$2" "$5" || true

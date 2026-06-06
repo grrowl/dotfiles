@@ -1,5 +1,9 @@
 [diff]
     tool = difftastic
+    # make difftastic the default for `git diff`, via a wrapper that falls back
+    # to plain diff if difft isn't installed (see ~/dotfiles/bin/git-difft).
+    # git log/show/add -p keep using the internal diff + delta pager.
+    external = git-difft
 
 [difftool]
     prompt = false
@@ -9,6 +13,10 @@
 
 [pager]
     difftool = true
+    # page `git diff` (now difftastic output) with less, NOT delta — delta would
+    # garble difftastic's already-formatted output. core.pager=delta still applies
+    # to log/show/blame.
+    diff = less -R
 
 [alias]
     dft = difftool

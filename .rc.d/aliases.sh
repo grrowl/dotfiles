@@ -126,3 +126,15 @@ ts() {
     tmux attach \; choose-tree -Zs -F "$fmt" 2>/dev/null || echo "no tmux sessions"
   fi
 }
+
+# rerun <cmd...> — re-run a command whenever files under the cwd change, using
+# whichever file watcher is installed (watchexec preferred, else entr). Lets the
+# same alias work across machines that have one or the other.
+if command -v watchexec >/dev/null 2>&1; then
+  rerun() { watchexec --restart -- "$@"; }
+elif command -v entr >/dev/null 2>&1; then
+  # entr takes the file list on stdin; feed it everything under cwd minus .git
+  rerun() { find . -type f -not -path '*/.git/*' | entr -r -- "$@"; }
+else
+  rerun() { echo "rerun: install watchexec or entr" >&2; return 127; }
+fi
