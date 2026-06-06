@@ -42,12 +42,11 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # zoxide
 if command -v zoxide >/dev/null 2>&1; then eval "$(zoxide init zsh)"; fi
 
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 # opencode
-export PATH=/Users/tom/.opencode/bin:$PATH
+[ -d "$HOME/.opencode/bin" ] && export PATH="$HOME/.opencode/bin:$PATH"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/tom/.lmstudio/bin"
-# End of LM Studio CLI section
+# LM Studio CLI (lms)
+[ -d "$HOME/.lmstudio/bin" ] && export PATH="$PATH:$HOME/.lmstudio/bin"
 

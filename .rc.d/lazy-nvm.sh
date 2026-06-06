@@ -11,7 +11,9 @@ function lazy_nvm {
   if [ -d "${HOME}/.nvm" ]; then
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # linux
-    [ -s "$(brew --prefix nvm)/nvm.sh" ] && source $(brew --prefix nvm)/nvm.sh # osx
+    if command -v brew >/dev/null 2>&1; then
+      [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh" # osx
+    fi
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # nvm bash_completion
   fi
 }
@@ -22,4 +24,4 @@ function npm { lazy_nvm; npm "$@"; }
 function node { lazy_nvm; node "$@"; }
 function npx { lazy_nvm; npx "$@"; }
 function yarn { lazy_nvm; yarn "$@"; }
-function pnpm { lazy_nvm; yarn "$@"; }
+function pnpm { lazy_nvm; pnpm "$@"; }

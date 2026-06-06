@@ -26,9 +26,8 @@ PS1="\[\e[1;32m\]\h:\W \u$\[\e[0m\] "
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/tom/.lmstudio/bin"
-# End of LM Studio CLI section
+# LM Studio CLI (lms)
+[ -d "$HOME/.lmstudio/bin" ] && export PATH="$PATH:$HOME/.lmstudio/bin"
 

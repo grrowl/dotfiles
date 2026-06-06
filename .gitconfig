@@ -40,10 +40,11 @@
 	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
 	last = rev-list -1 HEAD
 [core]
-	excludesfile = /Users/tom/dotfiles/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	whitespace = tab-in-indent,trailing-space,space-before-tab
 	ignorecase = false
-	pager = delta
+	# use delta if installed, else fall back to less (don't break git without delta)
+	pager = command -v delta >/dev/null 2>&1 && delta || less -R
 [push]
 	default = upstream
 [status]
@@ -64,7 +65,7 @@
 	path = ~/dotfiles/.gitconfig_difftastic
 	condition = command -v difft >/dev/null 2>&1
 [interactive]
-	diffFilter = delta --color-only
+	diffFilter = command -v delta >/dev/null 2>&1 && delta --color-only || cat
 [delta]
     features = decorations
 	navigate = true
@@ -79,7 +80,7 @@
 	conflictStyle = zdiff3
 [credential "https://github.com"]
 	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper = !gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper = !gh auth git-credential
