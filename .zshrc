@@ -4,6 +4,14 @@
 # ensure /usr/local/bin is in path
 export PATH=/usr/local/bin:~/.local/bin:$PATH
 
+# Homebrew — load EARLY so brew's completions are on $fpath before compinit runs
+# (zgen triggers compinit below; otherwise _zoxide & all brew completions get missed).
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x /usr/local/bin/brew ]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+
 # load all files from .shell/zshrc.d directory
 if [ -d $HOME/.zshrc.d ]; then
   for file in $HOME/.zshrc.d/*.zsh; do
@@ -30,7 +38,7 @@ if [ -f '/Users/tom/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tom/google-
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tom/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tom/google-cloud-sdk/completion.zsh.inc'; fi
 
-if [ -f '/opt/homebrew/bin/brew' ]; then eval "$(/opt/homebrew/bin/brew shellenv)"; fi
+# (brew shellenv moved to the top so completions load before compinit)
 
 # bun completions
 [ -s "/Users/tom/.bun/_bun" ] && source "/Users/tom/.bun/_bun"
@@ -49,4 +57,9 @@ if command -v zoxide >/dev/null 2>&1; then eval "$(zoxide init zsh)"; fi
 
 # LM Studio CLI (lms)
 [ -d "$HOME/.lmstudio/bin" ] && export PATH="$PATH:$HOME/.lmstudio/bin"
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/tom/.lmstudio/bin"
+# End of LM Studio CLI section
 
