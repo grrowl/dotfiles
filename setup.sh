@@ -30,6 +30,7 @@ link_config() {   # link_config <repo-path> <abs-dest>
     echo "Linked $1 -> $dest"
 }
 
+link_config config/bat/config        "$HOME/.config/bat/config"
 link_config config/ghostty/config    "$HOME/.config/ghostty/config"
 link_config config/zed/settings.json "$HOME/.config/zed/settings.json"
 link_config config/zed/keymap.json   "$HOME/.config/zed/keymap.json"

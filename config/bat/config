@@ -1,0 +1,3 @@
+# bat config — just syntax highlighting.
+# plain = no line numbers, no file headers, no grid/borders.
+--style="plain"

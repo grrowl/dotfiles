@@ -9,6 +9,8 @@ bak
 # files we've vetted as public-safe. Anything new under config/ stays private
 # until explicitly un-ignored here (guards against leaking app secrets).
 config/**
+!config/bat/
+!config/bat/config
 !config/ghostty/
 !config/ghostty/config
 !config/zed/
