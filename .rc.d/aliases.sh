@@ -94,6 +94,34 @@ alias vscode-server="docker run -it --init -p 3000:3000 -v "$(pwd):/home/workspa
 alias cc='claude --dangerously-skip-permissions --system-prompt "."'
 alias ccw='claude --dangerously-skip-permissions --system-prompt "." --tmux -w'
 
+# gw — create a git worktree under .claude/worktrees/<name>, copy in the
+#      .worktreeinclude (gitignored) files, cd into it, and print its path.
+#      Git's chatter goes to stderr so stdout is just the path, e.g:
+#          zed "$(gw new-feature)"
+#   usage: gw <name> [base-ref]   (base-ref defaults to HEAD)
+gw() {
+  local repo name wt
+  repo=$(git rev-parse --show-toplevel 2>/dev/null) || { echo "gw: not in a git repo" >&2; return 1; }
+  name=$1
+  [ -n "$name" ] || { echo "usage: gw <name> [base-ref]" >&2; return 1; }
+  wt="$repo/.claude/worktrees/$name"
+  [ -e "$wt" ] && { echo "gw: $wt already exists" >&2; return 1; }
+
+  git -C "$repo" worktree add -b "worktree-$name" "$wt" "${2:-HEAD}" >&2 || return
+
+  # replicate .worktreeinclude: copy gitignored files matching its patterns
+  if [ -f "$repo/.worktreeinclude" ]; then
+    git -C "$repo" ls-files -z --others --ignored --exclude-from=.worktreeinclude \
+      | while IFS= read -r -d '' f; do
+          mkdir -p "$(dirname "$wt/$f")"
+          cp -p "$repo/$f" "$wt/$f"
+        done
+  fi
+
+  echo "$wt"
+  cd "$wt"
+}
+
 alias t-claude="tmux has-session -t claude-session || tmux new-session -d -s claude-session; tmux attach-session -t claude-session"
 alias t-code="tmux has-session -t code-session || tmux new-session -d -s code-session; tmux attach-session -t code-session"
 
