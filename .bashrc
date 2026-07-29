@@ -31,3 +31,6 @@ bind '"\e[B": history-search-forward'
 # LM Studio CLI (lms)
 [ -d "$HOME/.lmstudio/bin" ] && export PATH="$PATH:$HOME/.lmstudio/bin"
 
+
+# Added by the BaseRT installer
+export PATH="/Users/tom/.basert:$PATH"
