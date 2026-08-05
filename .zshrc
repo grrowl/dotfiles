@@ -63,3 +63,9 @@ if command -v zoxide >/dev/null 2>&1; then eval "$(zoxide init zsh)"; fi
 export PATH="$PATH:/Users/tom/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+# Added by cua-driver-rs installer — see https://github.com/trycua/cua
+export PATH="/Users/tom/.local/bin:$PATH"
+
+# Added by the BaseRT installer
+export PATH="/Users/tom/.basert:$PATH"
