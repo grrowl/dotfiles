@@ -30,4 +30,15 @@ quick-terminal-position = bottom
 quick-terminal-autohide = false
 quick-terminal-animation-duration = 0.1
 # copy-on-select = false
+
 keybind = shift+enter=text:\x1b\r
+
+# Navigation hierarchy: cmd+alt = tabs. Panes/splits are ctrl+shift+arrow,
+# deliberately left unbound here so they pass straight through to tmux
+# (which owns splits inside the terminal). Same chord works in Zed.
+keybind = cmd+alt+left=previous_tab
+keybind = cmd+alt+right=next_tab
+# Drop Ghostty's default goto_split:up/down -- orphaned leftovers, since
+# cmd+alt+left/right above already claimed this modifier for tabs.
+keybind = cmd+alt+up=unbind
+keybind = cmd+alt+down=unbind

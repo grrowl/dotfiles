@@ -12,7 +12,18 @@
       "cmd-p": "command_palette::Toggle",
       "cmd-shift-p": "project_symbols::Toggle",
       "alt-cmd-o": "workspace::Open",
-      "cmd-alt-n": ["task::Spawn", { "task_name": "agent terminal" }]
+      "cmd-alt-n": ["task::Spawn", { "task_name": "agent terminal" }],
+
+      // Navigation hierarchy, kept parallel with Ghostty + tmux:
+      //   cmd-alt-arrow    -> tabs (flat, left/right only)  [same as Ghostty]
+      //   ctrl-shift-arrow -> panes/splits (the 2D grid)    [same as tmux]
+      // Tabs can't share tmux's shift-arrow here because that's text selection.
+      "cmd-alt-left": "pane::ActivatePreviousItem",
+      "cmd-alt-right": "pane::ActivateNextItem",
+      "ctrl-shift-left": "workspace::ActivatePaneLeft",
+      "ctrl-shift-right": "workspace::ActivatePaneRight",
+      "ctrl-shift-up": "workspace::ActivatePaneUp",
+      "ctrl-shift-down": "workspace::ActivatePaneDown"
     }
   },
   {

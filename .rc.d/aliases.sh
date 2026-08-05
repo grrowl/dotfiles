@@ -92,7 +92,41 @@ alias pbjsons="pbpaste | jq -sRr '@json'"
 alias vscode-server="docker run -it --init -p 3000:3000 -v "$(pwd):/home/workspace:cached" gitpod/openvscode-server"
 
 alias cc='claude --dangerously-skip-permissions --system-prompt "."'
-alias ccw='claude --dangerously-skip-permissions --system-prompt "." --tmux -w'
+
+# cct — boot cc inside tmux. Already in tmux: a new window in the CURRENT
+#       session. Outside: attach/create the session for this dir (tt's naming)
+#       and boot cc there.
+cct() {
+  local cmd='claude --dangerously-skip-permissions --system-prompt "."'
+  # tmux runs the command via sh -c, so re-quote each arg to survive splitting
+  local a
+  for a in "$@"; do cmd="$cmd $(printf '%q' "$a")"; done
+  if [ -n "$TMUX" ]; then
+    tmux new-window -c "$PWD" "$cmd"
+    return
+  fi
+  local name
+  name="$(basename "$(dirname "$PWD")")_$(basename "$PWD")"
+  if tmux has-session -t "=$name" 2>/dev/null; then
+    tmux new-window -t "=$name" -c "$PWD" "$cmd"
+    tmux attach-session -t "=$name"
+  else
+    tmux new-session -s "$name" -c "$PWD" "$cmd"
+  fi
+}
+
+# ccw — cc in a fresh git worktree. Outside tmux, let claude build its own
+#       session (--tmux). Inside tmux, DON'T pass --tmux: it creates a separate
+#       session and switch-clients you into it, yanking you out of whatever you
+#       were working in. Give it a window in the current session instead.
+ccw() {
+  local cmd='claude --dangerously-skip-permissions --system-prompt "." -w'
+  if [ -n "$TMUX" ]; then
+    tmux new-window -c "$PWD" "$cmd${*:+ $*}"
+  else
+    claude --dangerously-skip-permissions --system-prompt "." --tmux -w "$@"
+  fi
+}
 
 # gw — create a git worktree under .claude/worktrees/<name>, copy in the
 #      .worktreeinclude (gitignored) files, cd into it, and print its path.

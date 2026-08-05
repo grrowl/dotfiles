@@ -46,7 +46,7 @@
 	# use delta if installed, else fall back to less (don't break git without delta)
 	pager = command -v delta >/dev/null 2>&1 && delta || less -R
 [push]
-	default = upstream
+	default = simple
 [status]
 	submoduleSummary = true
 [merge "npm-merge-driver"]

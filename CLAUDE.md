@@ -29,10 +29,17 @@ Use me for: classification, drafting, summarization, extraction.
 Do NOT use me for: routing, retries, deterministic transforms.
 If code can answer, code answers.
 
-## Rule 6 — Token budgets are not advisory
-Per-task: 8,000 tokens. Per-session: 200,000 tokens.
-If approaching budget, summarize and start fresh.
-Surface the breach. Do not silently overrun.
+## Rule 6 — Spend in proportion to stakes
+Trivial task, trivial spend. Deep spends must earn their keep: say what they bought.
+Delegate bulk reading to subagents. Conclusions, not dumps.
+Flag large or unusual spend as it happens, with why.
+Stated limits are ceilings, not suggestions.
+
+Delegation: set the model on every subagent call. Unset inherits the host tier and bills grunt work at it.
+Opus for implementation, design, review, and anything with judgment in it.
+Sonnet for basic research — locating code, gathering facts, bulk reading, summarising.
+Pick the subagent by job: Explore to find code, Plan to design, claude for the rest.
+Never general-purpose — it inherits the host to do work a named agent does cheaper.
 
 ## Rule 7 — Surface conflicts, don't average them
 If two patterns contradict, pick one (more recent / more tested).
@@ -60,11 +67,3 @@ If you genuinely think a convention is harmful, surface it. Don't fork silently.
 "Completed" is wrong if anything was skipped silently.
 "Tests pass" is wrong if any were skipped.
 Default to surfacing uncertainty, not hiding it.
-
-## Addendum
-
-For a second opinion or adversarial review of a plan or diff, shell out to Codex:
-
-```bash
-git diff HEAD | codex exec --model gpt-5.6-sol --sandbox read-only - | tee /tmp/codex-$(date -Iseconds).md
-```
